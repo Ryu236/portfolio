@@ -8,47 +8,31 @@ export const Home = (): JSX.Element => (
     </Head>
 
     <main>
-      <h1 className="title">
-        Welcome to <a href="https://nextjs.org">Next.js!</a>
-      </h1>
+      <h1 className="title">Ryutaro Kobayashi</h1>
 
-      <p className="description">
-        Get started by editing <code>pages/index.tsx</code>
-      </p>
-
-      <button
-        onClick={() => {
-          window.alert('With typescript and Jest')
-        }}
-      >
-        Test Button
-      </button>
+      <p className="description">I am a software engineer.</p>
 
       <div className="grid">
-        <a href="https://nextjs.org/docs" className="card">
-          <h3>Documentation &rarr;</h3>
-          <p>Find in-depth information about Next.js features and API.</p>
+        <a href="https://blog.ryu236.com" className="card">
+          <h3>Blog &rarr;</h3>
+          <p>This is my blog. This blog is writen by Japanese.</p>
         </a>
 
-        <a href="https://nextjs.org/learn" className="card">
-          <h3>Learn &rarr;</h3>
-          <p>Learn about Next.js in an interactive course with quizzes!</p>
+        <a href="https://github.com/Ryu236/" className="card">
+          <h3>GitHub &rarr;</h3>
+          <p>
+            This is my profile page in github. You can see my projects and code.
+          </p>
         </a>
 
-        <a
-          href="https://github.com/vercel/next.js/tree/master/examples"
-          className="card"
-        >
-          <h3>Examples &rarr;</h3>
-          <p>Discover and deploy boilerplate example Next.js projects.</p>
+        <a href="https://twitter.com/Ryuk236" className="card">
+          <h3>Twitter &rarr;</h3>
+          <p>My twitter id is Ryuk236. Please follow me!</p>
         </a>
 
-        <a
-          href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          className="card"
-        >
-          <h3>Deploy &rarr;</h3>
-          <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
+        <a href="https://www.wantedly.com/id/ryu236" className="card">
+          <h3>Wantedly &rarr;</h3>
+          <p>My profile page in Wantedly. Please check this.</p>
         </a>
       </div>
     </main>
