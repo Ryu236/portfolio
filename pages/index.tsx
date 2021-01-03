@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 
 export const Home = (): JSX.Element => (
   <div className="container">
@@ -14,23 +15,29 @@ export const Home = (): JSX.Element => (
 
       <div className="grid">
         <a href="https://blog.ryu236.com" className="card">
+          <Image src="/hatenablog-logo.svg" width={60} height={60} />
           <h3>Blog &rarr;</h3>
           <p>This is my blog. This blog is writen by Japanese.</p>
         </a>
 
         <a href="https://github.com/Ryu236/" className="card">
+          <Image src="/github_icon_large_dark.svg" width={60} height={60} />
           <h3>GitHub &rarr;</h3>
-          <p>
-            This is my profile page in github. You can see my projects and code.
-          </p>
+          <p>This is my github page. You can see my projects and code.</p>
         </a>
 
         <a href="https://twitter.com/Ryuk236" className="card">
+          <Image
+            src="/Twitter_Social_Icon_Circle_Color.svg"
+            width={60}
+            height={60}
+          />
           <h3>Twitter &rarr;</h3>
           <p>My twitter id is Ryuk236. Please follow me!</p>
         </a>
 
         <a href="https://www.wantedly.com/id/ryu236" className="card">
+          <Image src="/wantedly_mark.svg" width={60} height={60} />
           <h3>Wantedly &rarr;</h3>
           <p>My profile page in Wantedly. Please check this.</p>
         </a>
