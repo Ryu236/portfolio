@@ -4,14 +4,17 @@ import Image from 'next/image'
 export const Home = (): JSX.Element => (
   <div className="container">
     <Head>
-      <title>Create Next App</title>
+      <title>ryu236.com</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
     <main>
-      <h1 className="title">Ryutaro Kobayashi</h1>
+      <h1 className="title">Ryu236</h1>
 
-      <p className="description">I am a software engineer.</p>
+      <p className="description">
+        Hi, my name is Ryutaro Kobayashi.
+        <br />I am a software engineer in Japan.
+      </p>
 
       <div className="grid">
         <a href="https://blog.ryu236.com" className="card">
