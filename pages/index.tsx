@@ -46,11 +46,11 @@ export const Home = (): JSX.Element => (
 
     <footer>
       <a
-        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+        href="https://twitter.com/Ryuk236"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Powered by <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
+        © 2021 Ryutaro Kobayashi
       </a>
     </footer>
 
