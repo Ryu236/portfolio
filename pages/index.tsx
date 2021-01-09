@@ -1,6 +1,16 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
+const SwitchTheme = function () {
+  const theme = document.documentElement.dataset.theme
+
+  if (theme === 'dark') {
+    document.documentElement.dataset.theme = 'light'
+  } else {
+    document.documentElement.dataset.theme = 'dark'
+  }
+}
+
 export const Home = (): JSX.Element => (
   <div className="container">
     <Head>
@@ -15,6 +25,10 @@ export const Home = (): JSX.Element => (
         Hi, my name is Ryutaro Kobayashi.
         <br />I am a software engineer in Japan.
       </p>
+
+      <div className="switch">
+        <button onClick={SwitchTheme}>Switch theme</button>
+      </div>
 
       <div className="grid">
         <a href="https://blog.ryu236.com" className="card">
@@ -161,8 +175,8 @@ export const Home = (): JSX.Element => (
       .card:hover,
       .card:focus,
       .card:active {
-        color: #0070f3;
-        border-color: #0070f3;
+        color: var(--active-color);
+        border-color: var(--active-color);
       }
 
       .card h3 {
@@ -189,12 +203,26 @@ export const Home = (): JSX.Element => (
     `}</style>
 
     <style jsx global>{`
+      :root {
+        --active-color: #0070f3;
+      }
+      [data-theme='dark'] {
+        --bg-color: #121212;
+        --text-color: #f4f4f6;
+        --active-color: #369bff;
+      }
+
       html,
       body {
         padding: 0;
         margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
           Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+      }
+      main,
+      footer {
+        background: var(--bg-color);
+        color: var(--text-color);
       }
 
       * {
