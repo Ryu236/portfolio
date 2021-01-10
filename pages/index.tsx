@@ -74,8 +74,6 @@ export const Home = (): JSX.Element => (
     <style jsx>{`
       .container {
         min-height: 100vh;
-        padding: 0 0.5rem;
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -93,7 +91,7 @@ export const Home = (): JSX.Element => (
       footer {
         width: 100%;
         height: 100px;
-        border-top: 1px solid #eaeaea;
+        border-top: 1px solid var(--border-color);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -167,7 +165,7 @@ export const Home = (): JSX.Element => (
         text-align: left;
         color: inherit;
         text-decoration: none;
-        border: 1px solid #eaeaea;
+        border: 1px solid var(--border-color);
         border-radius: 10px;
         transition: color 0.15s ease, border-color 0.15s ease;
       }
@@ -205,11 +203,13 @@ export const Home = (): JSX.Element => (
     <style jsx global>{`
       :root {
         --active-color: #0070f3;
+        --border-color: #eaeaea;
       }
       [data-theme='dark'] {
         --bg-color: #121212;
         --text-color: #f4f4f6;
         --active-color: #369bff;
+        --border-color: #5d6d7e;
       }
 
       html,
@@ -220,6 +220,7 @@ export const Home = (): JSX.Element => (
           Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
       }
       main,
+      container,
       footer {
         background: var(--bg-color);
         color: var(--text-color);
