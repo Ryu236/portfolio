@@ -2,12 +2,25 @@ import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 
+let isDarkMode: boolean
+let theme: string
+
 const SwitchTheme = function () {
-  const theme = document.documentElement.dataset.theme
+  theme = document.documentElement.dataset.theme
   if (theme === 'dark') {
+    isDarkMode = false
     document.documentElement.dataset.theme = 'light'
   } else {
     document.documentElement.dataset.theme = 'dark'
+    isDarkMode = true
+  }
+}
+
+const GithubIcon = function () {
+  if (isDarkMode) {
+    return <Image src="/github_icon_large_white.svg" width={60} height={60} />
+  } else {
+    return <Image src="/github_icon_large_dark.svg" width={60} height={60} />
   }
 }
 
@@ -40,7 +53,7 @@ class Home extends React.Component {
             </a>
 
             <a href="https://github.com/Ryu236/" className="card">
-              <Image src="/github_icon_large_dark.svg" width={60} height={60} />
+              <GithubIcon />
               <h3>GitHub &rarr;</h3>
               <p>This is my github page. You can see my projects and code.</p>
             </a>
