@@ -24,6 +24,14 @@ const GithubIcon = function () {
   }
 }
 
+const BlogIcon = function () {
+  if (isDarkMode) {
+    return <Image src="/hatenablog-logo.svg" width={60} height={60} />
+  } else {
+    return <Image src="/hatenablog-logo.svg" width={60} height={60} />
+  }
+}
+
 class Home extends React.Component {
   render() {
     return (
@@ -47,7 +55,7 @@ class Home extends React.Component {
 
           <div className="grid">
             <a href="https://blog.ryu236.com" className="card">
-              <Image src="/hatenablog-logo.svg" width={60} height={60} />
+              <BlogIcon />
               <h3>Blog &rarr;</h3>
               <p>This is my blog. This blog is writen by Japanese.</p>
             </a>
