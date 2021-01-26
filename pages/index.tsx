@@ -57,7 +57,7 @@ class Home extends React.Component {
             <a href="https://blog.ryu236.com" className="card">
               <BlogIcon />
               <h3>Blog &rarr;</h3>
-              <p>This is my blog. This blog is writen by Japanese.</p>
+              <p>This is my blog. This blog is written by Japanese.</p>
             </a>
 
             <a href="https://github.com/Ryu236/" className="card">
