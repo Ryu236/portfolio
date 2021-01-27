@@ -11,8 +11,8 @@ const SwitchTheme = function () {
     isDarkMode = false
     document.documentElement.dataset.theme = 'light'
   } else {
-    document.documentElement.dataset.theme = 'dark'
     isDarkMode = true
+    document.documentElement.dataset.theme = 'dark'
   }
 }
 
@@ -50,7 +50,8 @@ class Home extends React.Component {
           </p>
 
           <div className="switch">
-            <button onClick={SwitchTheme}>Switch theme</button>
+            <input id="toggle" type="checkbox" onChange={SwitchTheme} />
+            <label htmlFor="toggle">Switch theme</label>
           </div>
 
           <div className="grid">
