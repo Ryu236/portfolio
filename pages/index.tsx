@@ -50,8 +50,13 @@ class Home extends React.Component {
           </p>
 
           <div className="switch">
-            <input id="toggle" type="checkbox" onChange={SwitchTheme} />
-            <label htmlFor="toggle">Switch theme</label>
+            <input
+              id="toggle"
+              className="toggle-input"
+              type="checkbox"
+              onChange={SwitchTheme}
+            />
+            <label htmlFor="toggle" className="toggle-label" />
           </div>
 
           <div className="grid">
@@ -161,6 +166,48 @@ class Home extends React.Component {
           .description {
             line-height: 1.5;
             font-size: 1.5rem;
+          }
+
+          .toggle-switch {
+            position: relative;
+            width: 75px;
+            height: 42px;
+            margin: auto;
+          }
+
+          .toggle-label {
+            width: 68px;
+            height: 30px;
+            background: #ccc;
+            position: relative;
+            display: inline-block;
+            border-radius: 46px;
+            transition: 0.4s;
+            box-sizing: border-box;
+          }
+
+          .toggle-label:after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            background: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            transition: 0.4s;
+          }
+
+          .toggle-input {
+            display: none;
+          }
+          .toggle-input:checked + .toggle-label {
+            background-color: #4bd865;
+          }
+          .toggle-input:checked + .toggle-label:after {
+            left: 40px;
           }
 
           code {
