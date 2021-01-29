@@ -50,6 +50,7 @@ class Home extends React.Component {
           </p>
 
           <div className="switch">
+            <Image src="/sun.svg" width={30} height={30} />
             <input
               id="toggle"
               className="toggle-input"
@@ -57,6 +58,7 @@ class Home extends React.Component {
               onChange={SwitchTheme}
             />
             <label htmlFor="toggle" className="toggle-label" />
+            <Image src="/moon.svg" width={30} height={30} />
           </div>
 
           <div className="grid">
@@ -184,6 +186,7 @@ class Home extends React.Component {
             border-radius: 46px;
             transition: 0.4s;
             box-sizing: border-box;
+            margin: 0 10px;
           }
 
           .toggle-label:after {
