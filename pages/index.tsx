@@ -131,6 +131,7 @@ const Home = () => {
             className="toggle-input"
             type="checkbox"
             onChange={SwitchTheme}
+            autoComplete="off"
           />
           <label htmlFor="toggle" className="toggle-label" />
           <Moon fill={dark ? '#FCD707' : 'gray'} />
