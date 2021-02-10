@@ -17,8 +17,15 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="en">
+      <Html lang="en" prefix="og: https://ogp.me/ns/profile#">
         <Head>
+          <title>ryu236.com</title>
+          <link rel="icon" href="/favicon.ico" />
+          <meta property="og:title" content="ryu236.com" />
+          <meta property="og:type" content="profile" />
+          <meta property="og:url" content="https://www.ryu236.com/" />
+          <meta property="og:image" content="/icon.png" />
+          <meta property="profile:username" content="Ryu236" />
           {/* Google Analytics */}
           <script
             async={true}
