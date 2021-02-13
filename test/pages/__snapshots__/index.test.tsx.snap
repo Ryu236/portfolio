@@ -3,27 +3,27 @@
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="jsx-1814051458 container"
+    class="jsx-3802520009 container"
   >
     <main
-      class="jsx-1814051458"
+      class="jsx-3802520009"
     >
       <h1
-        class="jsx-1814051458 title"
+        class="jsx-3802520009 title"
       >
         Ryu236
       </h1>
       <p
-        class="jsx-1814051458 description"
+        class="jsx-3802520009 description"
       >
         Hi, my name is Ryutaro Kobayashi.
         <br
-          class="jsx-1814051458"
+          class="jsx-3802520009"
         />
         I am a software engineer in Japan.
       </p>
       <div
-        class="jsx-1814051458 switch"
+        class="jsx-3802520009 switch"
       >
         <svg
           fill="orange"
@@ -74,16 +74,17 @@ c-0.862,0.861-0.862,2.259,0,3.12l2.497,2.497C9.972,13.094,11.369,13.094,12.231,1
           />
         </svg>
         <input
-          class="jsx-1814051458 toggle-input"
+          autocomplete="off"
+          class="jsx-3802520009 toggle-input"
           id="toggle"
           type="checkbox"
         />
         <label
-          class="jsx-1814051458 toggle-label"
+          class="jsx-3802520009 toggle-label"
           for="toggle"
         />
         <svg
-          fill="#FCD707"
+          fill="gray"
           height="30px"
           viewBox="-12 0 448 448.04455"
           width="30px"
@@ -95,45 +96,40 @@ c-0.862,0.861-0.862,2.259,0,3.12l2.497,2.497C9.972,13.094,11.369,13.094,12.231,1
         </svg>
       </div>
       <div
-        class="jsx-1814051458 grid"
+        class="jsx-3802520009 grid"
       >
         <a
-          class="jsx-1814051458 card"
+          class="jsx-3802520009 card"
           href="https://blog.ryu236.com"
         >
-          <div
-            style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+          <svg
+            height="60px"
+            viewBox="0 0 100 100"
+            width="60px"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <div
-              style="box-sizing: border-box; display: block; max-width: 100%;"
-            >
-              <img
-                alt=""
-                aria-hidden="true"
-                role="presentation"
-                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
-                style="max-width: 100%; display: block;"
-              />
-            </div>
-            <img
-              decoding="async"
-              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-              style="visibility: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+            <path
+              d="M50.1 100.2C22.5 100.2 0 77.7 0 50.1S22.5 0 50.1 0s50.1 22.5 50.1 50.1c-.1 27.6-22.5 50.1-50.1 50.1zm0-93.8C26 6.4 6.4 26 6.4 50.1S26 93.8 50.1 93.8s43.7-19.6 43.7-43.7S74.2 6.4 50.1 6.4z"
+              fill="#333"
             />
-          </div>
+            <path
+              d="M55.9 25.3c-2.4-5-3.9-9.8-4.7-12.6v35.5c1.2.5 2.1 1.6 2.1 3 0 1.8-1.5 3.3-3.3 3.3-1.8 0-3.3-1.5-3.3-3.3 0-1.5 1-2.7 2.3-3.1V12.7c-.8 2.8-2.2 7.6-4.7 12.6-3.8 7.8-8.6 14.6-8.6 14.6l3.1 41.8s2.9 3.2 11.3 3.2 11.3-3.2 11.3-3.2l3.1-41.8s-4.8-6.8-8.6-14.6z"
+              fill="#333"
+            />
+          </svg>
           <h3
-            class="jsx-1814051458"
+            class="jsx-3802520009"
           >
             Blog →
           </h3>
           <p
-            class="jsx-1814051458"
+            class="jsx-3802520009"
           >
             This is my blog. This blog is written by Japanese.
           </p>
         </a>
         <a
-          class="jsx-1814051458 card"
+          class="jsx-3802520009 card"
           href="https://github.com/Ryu236/"
         >
           <div
@@ -157,18 +153,18 @@ c-0.862,0.861-0.862,2.259,0,3.12l2.497,2.497C9.972,13.094,11.369,13.094,12.231,1
             />
           </div>
           <h3
-            class="jsx-1814051458"
+            class="jsx-3802520009"
           >
             GitHub →
           </h3>
           <p
-            class="jsx-1814051458"
+            class="jsx-3802520009"
           >
             This is my github page. You can see my projects and code.
           </p>
         </a>
         <a
-          class="jsx-1814051458 card"
+          class="jsx-3802520009 card"
           href="https://twitter.com/Ryuk236"
         >
           <div
@@ -192,18 +188,18 @@ c-0.862,0.861-0.862,2.259,0,3.12l2.497,2.497C9.972,13.094,11.369,13.094,12.231,1
             />
           </div>
           <h3
-            class="jsx-1814051458"
+            class="jsx-3802520009"
           >
             Twitter →
           </h3>
           <p
-            class="jsx-1814051458"
+            class="jsx-3802520009"
           >
             My twitter id is Ryuk236. Please follow me!
           </p>
         </a>
         <a
-          class="jsx-1814051458 card"
+          class="jsx-3802520009 card"
           href="https://www.wantedly.com/id/ryu236"
         >
           <div
@@ -227,12 +223,12 @@ c-0.862,0.861-0.862,2.259,0,3.12l2.497,2.497C9.972,13.094,11.369,13.094,12.231,1
             />
           </div>
           <h3
-            class="jsx-1814051458"
+            class="jsx-3802520009"
           >
             Wantedly →
           </h3>
           <p
-            class="jsx-1814051458"
+            class="jsx-3802520009"
           >
             My profile page in Wantedly. Please check this.
           </p>
@@ -240,10 +236,10 @@ c-0.862,0.861-0.862,2.259,0,3.12l2.497,2.497C9.972,13.094,11.369,13.094,12.231,1
       </div>
     </main>
     <footer
-      class="jsx-1814051458"
+      class="jsx-3802520009"
     >
       <a
-        class="jsx-1814051458"
+        class="jsx-3802520009"
         href="https://twitter.com/Ryuk236"
         rel="noopener noreferrer"
         target="_blank"

@@ -82,7 +82,7 @@ const Hatena = ({ fill }) => (
   </svg>
 )
 
-const Home = () => {
+export const Home = () => {
   let theme: string
 
   const [dark, useDark] = useState(false)
