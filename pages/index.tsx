@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
+import { Footer } from '../components/parts/footer'
 
 const Sun = ({ fill }) => (
   <svg
@@ -162,15 +163,7 @@ export const Home = () => {
         </div>
       </main>
 
-      <footer>
-        <a
-          href="https://twitter.com/Ryuk236"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          © 2021 Ryutaro Kobayashi
-        </a>
-      </footer>
+      <Footer />
 
       <style jsx>{`
         .container {
