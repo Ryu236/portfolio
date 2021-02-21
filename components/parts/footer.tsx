@@ -13,7 +13,12 @@ export const Footer = () => {
         </a>
       </footer>
 
-      <style jsx global>{`
+      <style jsx>{`
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+
         footer {
           width: 100%;
           height: 100px;
