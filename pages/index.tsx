@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
+import { Resume } from '../components/parts/resume'
 
 const Sun = ({ fill }) => (
   <svg
@@ -160,6 +161,7 @@ export const Home = () => {
             <p>My profile page in Wantedly. Please check this.</p>
           </a>
         </div>
+        <Resume />
       </main>
 
       <footer>
