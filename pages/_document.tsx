@@ -19,7 +19,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en" prefix="og: https://ogp.me/ns/profile#">
         <Head>
-          <title>ryu236.com</title>
           <link rel="icon" href="/favicon.ico" />
           <meta property="og:title" content="ryu236.com" />
           <meta property="og:type" content="profile" />

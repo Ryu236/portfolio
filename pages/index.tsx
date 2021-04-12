@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Head from 'next/head'
 import Image from 'next/image'
 import { Resume } from '../components/parts/resume'
 
@@ -111,6 +112,9 @@ export const Home = () => {
 
   return (
     <div className="container">
+      <Head>
+        <title>ryu236.com</title>
+      </Head>
       <main>
         <h1 className="title">Ryu236</h1>
 
