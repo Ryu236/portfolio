@@ -111,7 +111,7 @@ export const Home = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container flex flex-col mx-auto min-h-screen">
       <Head>
         <title>ryu236.com</title>
       </Head>
@@ -183,7 +183,6 @@ export const Home = () => {
 
       <style jsx>{`
         .container {
-          min-height: 100vh;
           flex-direction: column;
           justify-content: center;
           align-items: center;
