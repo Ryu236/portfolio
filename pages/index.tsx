@@ -123,7 +123,7 @@ export const Home = () => {
           <br />I am a software engineer in Japan.
         </p>
 
-        <div className="switch">
+        <div className="switch flex relative mt-5">
           <Sun fill={dark ? 'gray' : 'orange'} />
           <input
             id="toggle"
@@ -132,7 +132,10 @@ export const Home = () => {
             onChange={SwitchTheme}
             autoComplete="off"
           />
-          <label htmlFor="toggle" className="toggle-label" />
+          <label
+            htmlFor="toggle"
+            className="toggle-label relative inline-block"
+          />
           <Moon fill={dark ? '#FCD707' : 'gray'} />
         </div>
 
@@ -247,7 +250,6 @@ export const Home = () => {
         }
 
         .toggle-switch {
-          position: relative;
           width: 75px;
           height: 42px;
           margin: auto;
@@ -257,8 +259,6 @@ export const Home = () => {
           width: 68px;
           height: 30px;
           background: #ccc;
-          position: relative;
-          display: inline-block;
           border-radius: 46px;
           transition: 0.4s;
           box-sizing: border-box;
@@ -323,7 +323,7 @@ export const Home = () => {
           text-align: left;
           color: inherit;
           text-decoration: none;
-          border: 1px solid var(--border-color);
+          border: 1.5px solid var(--border-color);
           border-radius: 10px;
           transition: color 0.15s ease, border-color 0.15s ease;
         }

@@ -1,39 +1,39 @@
 import React from 'react'
 
-export const Resume: React.FC<{}> = () => {
+export const Resume: React.VFC<{}> = () => {
   return (
-    <>
-      <h1>Resume</h1>
-      <h2>Education</h2>
+    <article className="prose lg:prose-xl text-center">
+      <h2>Resume</h2>
+      <h3>Education</h3>
       <div>
-        Apr 2017 - Mar 2019 <br />
+        <p>Apr 2017 - Mar 2019 </p>
         Shinshu University Graduate School of Science and Technology
         (Master&#39;s Program)
       </div>
       <div>
-        Apr 2013 - Mar 2017 <br />
+        <p>Apr 2013 - Mar 2017 </p>
         Shinshu University Faculty of Engineering Computer Science and
         Engineering
       </div>
-      <h2>Career History</h2>
+      <h3>Career History</h3>
       <div>
-        Apr 2019 - Now <br />
+        <p>Apr 2019 - Now </p>
         DMM.com Software Engineer
         <br />
         Development payment platform
       </div>
       <div>
-        Sep 2018 - Sep 2018 <br />
+        <p>Sep 2018 - Sep 2018 </p>
         Eureka Internship
         <br />
         Development Android application
       </div>
       <div>
-        Sep 2017 - Sep 2017 <br />
+        <p>Sep 2017 - Sep 2017 </p>
         SONY Internship
         <br />
         Development embedded system
       </div>
-    </>
+    </article>
   )
 }
