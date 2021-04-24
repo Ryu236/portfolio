@@ -118,7 +118,7 @@ export const Home = () => {
       <main>
         <h1 className="title">Ryu236</h1>
 
-        <p className="description">
+        <p className="text-2xl mt-3">
           Hi, my name is Ryutaro Kobayashi.
           <br />I am a software engineer in Japan.
         </p>
@@ -139,7 +139,7 @@ export const Home = () => {
           <Moon fill={dark ? '#FCD707' : 'gray'} />
         </div>
 
-        <div className="grid">
+        <div className="grid my-10">
           <a href="https://blog.ryu236.com" className="card">
             <Hatena fill={dark ? '#EEE' : '#333'} />
             <h3>Blog &rarr;</h3>
@@ -238,16 +238,6 @@ export const Home = () => {
           font-size: 4rem;
         }
 
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
         .toggle-switch {
           width: 75px;
           height: 42px;
@@ -312,7 +302,6 @@ export const Home = () => {
           flex-wrap: wrap;
 
           max-width: 800px;
-          margin-top: 3rem;
         }
 
         .card {
