@@ -18,21 +18,21 @@ export const Resume: React.VFC<{}> = () => {
       <h3>Career History</h3>
       <div>
         <p>Apr 2019 - Now </p>
-        DMM.com Software Engineer
+        DMM.com - Software Engineer
         <br />
-        Development payment platform
+        Development of the payment platform
       </div>
       <div>
         <p>Sep 2018 - Sep 2018 </p>
-        Eureka Internship
+        Eureka - Internship
         <br />
-        Development Android application
+        Development of Android application
       </div>
       <div>
         <p>Sep 2017 - Sep 2017 </p>
-        SONY Internship
+        SONY - Internship
         <br />
-        Development embedded system
+        Development of embedded system
       </div>
     </article>
   )
