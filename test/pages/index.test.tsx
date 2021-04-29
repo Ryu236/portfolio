@@ -18,7 +18,8 @@ describe('Home page', () => {
     expect(description).toBeInTheDocument()
   })
 
-  /*
+  {
+    /*
     it('clicking button triggers alert', () => {
       const { getByText } = render(<Home />, {})
       window.alert = jest.fn()
@@ -26,4 +27,5 @@ describe('Home page', () => {
       expect(window.alert).toHaveBeenCalledWith('With typescript and Jest')
     })
   */
+  }
 })

@@ -1,7 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
+import Head from 'next/head'
 import Image from 'next/image'
+import { Resume } from '../components/parts/resume'
 
-const Sun = ({ fill }) => (
+{
+  /*
+const Sun = ({fill}) => (
   <svg
     version="1.1"
     id="Capa_1"
@@ -52,7 +56,7 @@ c-0.862,0.861-0.862,2.259,0,3.12l2.497,2.497C9.972,13.094,11.369,13.094,12.231,1
   </svg>
 )
 
-const Moon = ({ fill }) => (
+const Moon = ({fill}) => (
   <svg
     width="30px"
     height="30px"
@@ -63,6 +67,8 @@ const Moon = ({ fill }) => (
     <path d="m224.023438 448.03125c85.714843.902344 164.011718-48.488281 200.117187-126.230469-22.722656 9.914063-47.332031 14.769531-72.117187 14.230469-97.15625-.109375-175.890626-78.84375-176-176 .972656-65.71875 37.234374-125.832031 94.910156-157.351562-15.554688-1.980469-31.230469-2.867188-46.910156-2.648438-123.714844 0-224.0000005 100.289062-224.0000005 224 0 123.714844 100.2851565 224 224.0000005 224zm0 0" />
   </svg>
 )
+*/
+}
 
 const Hatena = ({ fill }) => (
   <svg
@@ -83,10 +89,17 @@ const Hatena = ({ fill }) => (
 )
 
 export const Home = () => {
+  {
+    /*
   let theme: string
 
   const [dark, useDark] = useState(false)
+  */
+  }
+  const dark = false
 
+  {
+    /*
   const SwitchTheme = () => {
     theme = document.documentElement.dataset.theme
     //console.log(theme)
@@ -99,6 +112,8 @@ export const Home = () => {
       document.documentElement.dataset.theme = 'dark'
     }
   }
+  */
+  }
 
   const GithubIcon = () => {
     if (dark) {
@@ -109,16 +124,20 @@ export const Home = () => {
   }
 
   return (
-    <div className="container">
+    <div className="flex flex-col mx-auto min-h-screen">
+      <Head>
+        <title>ryu236.com</title>
+      </Head>
       <main>
         <h1 className="title">Ryu236</h1>
 
-        <p className="description">
+        <p className="text-xl mt-3">
           Hi, my name is Ryutaro Kobayashi.
           <br />I am a software engineer in Japan.
         </p>
 
-        <div className="switch">
+        {/*
+        <div className="switch flex relative mt-5">
           <Sun fill={dark ? 'gray' : 'orange'} />
           <input
             id="toggle"
@@ -127,11 +146,15 @@ export const Home = () => {
             onChange={SwitchTheme}
             autoComplete="off"
           />
-          <label htmlFor="toggle" className="toggle-label" />
+          <label
+            htmlFor="toggle"
+            className="toggle-label relative inline-block"
+          />
           <Moon fill={dark ? '#FCD707' : 'gray'} />
         </div>
+        */}
 
-        <div className="grid">
+        <div className="grid my-10">
           <a href="https://blog.ryu236.com" className="card">
             <Hatena fill={dark ? '#EEE' : '#333'} />
             <h3>Blog &rarr;</h3>
@@ -160,6 +183,7 @@ export const Home = () => {
             <p>My profile page in Wantedly. Please check this.</p>
           </a>
         </div>
+        <Resume />
       </main>
 
       <footer>
@@ -173,13 +197,6 @@ export const Home = () => {
       </footer>
 
       <style jsx>{`
-        .container {
-          min-height: 100vh;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
         main {
           padding: 5rem 0;
           flex: 1;
@@ -227,21 +244,10 @@ export const Home = () => {
         .title {
           margin: 0;
           line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
+          font-size: 3rem;
         }
 
         .toggle-switch {
-          position: relative;
           width: 75px;
           height: 42px;
           margin: auto;
@@ -251,8 +257,6 @@ export const Home = () => {
           width: 68px;
           height: 30px;
           background: #ccc;
-          position: relative;
-          display: inline-block;
           border-radius: 46px;
           transition: 0.4s;
           box-sizing: border-box;
@@ -307,7 +311,6 @@ export const Home = () => {
           flex-wrap: wrap;
 
           max-width: 800px;
-          margin-top: 3rem;
         }
 
         .card {
@@ -317,7 +320,7 @@ export const Home = () => {
           text-align: left;
           color: inherit;
           text-decoration: none;
-          border: 1px solid var(--border-color);
+          border: 2px solid var(--border-color);
           border-radius: 10px;
           transition: color 0.15s ease, border-color 0.15s ease;
         }
