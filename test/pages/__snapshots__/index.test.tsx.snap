@@ -3,103 +3,30 @@
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="jsx-3802520009 container"
+    class="jsx-1260913401 flex flex-col mx-auto min-h-screen"
   >
     <main
-      class="jsx-3802520009"
+      class="jsx-1260913401"
     >
       <h1
-        class="jsx-3802520009 title"
+        class="jsx-1260913401 title"
       >
         Ryu236
       </h1>
       <p
-        class="jsx-3802520009 description"
+        class="jsx-1260913401 text-xl mt-3"
       >
         Hi, my name is Ryutaro Kobayashi.
         <br
-          class="jsx-3802520009"
+          class="jsx-1260913401"
         />
         I am a software engineer in Japan.
       </p>
       <div
-        class="jsx-3802520009 switch"
-      >
-        <svg
-          fill="orange"
-          height="30px"
-          id="Capa_1"
-          version="1.1"
-          viewBox="0 0 45.16 45.16"
-          width="30px"
-          x="0px"
-          xmlns="http://www.w3.org/2000/svg"
-          y="0px"
-        >
-          <path
-            d="M22.58,11.269c-6.237,0-11.311,5.075-11.311,11.312s5.074,11.312,11.311,11.312c6.236,0,11.311-5.074,11.311-11.312
-S28.816,11.269,22.58,11.269z"
-          />
-          <path
-            d="M22.58,7.944c-1.219,0-2.207-0.988-2.207-2.206V2.207C20.373,0.988,21.361,0,22.58,0c1.219,0,2.207,0.988,2.207,2.207
-v3.531C24.787,6.956,23.798,7.944,22.58,7.944z"
-          />
-          <path
-            d="M22.58,37.215c-1.219,0-2.207,0.988-2.207,2.207v3.53c0,1.22,0.988,2.208,2.207,2.208c1.219,0,2.207-0.988,2.207-2.208
-v-3.53C24.787,38.203,23.798,37.215,22.58,37.215z"
-          />
-          <path
-            d="M32.928,12.231c-0.861-0.862-0.861-2.259,0-3.121l2.497-2.497c0.861-0.861,2.259-0.861,3.121,0
-c0.862,0.862,0.862,2.26,0,3.121l-2.497,2.497C35.188,13.093,33.791,13.093,32.928,12.231z"
-          />
-          <path
-            d="M12.231,32.93c-0.862-0.863-2.259-0.863-3.121,0l-2.497,2.496c-0.861,0.861-0.862,2.26,0,3.121
-c0.862,0.861,2.26,0.861,3.121,0l2.497-2.498C13.093,35.188,13.093,33.79,12.231,32.93z"
-          />
-          <path
-            d="M37.215,22.58c0-1.219,0.988-2.207,2.207-2.207h3.531c1.219,0,2.207,0.988,2.207,2.207c0,1.219-0.988,2.206-2.207,2.206
-h-3.531C38.203,24.786,37.215,23.799,37.215,22.58z"
-          />
-          <path
-            d="M7.944,22.58c0-1.219-0.988-2.207-2.207-2.207h-3.53C0.988,20.373,0,21.361,0,22.58c0,1.219,0.988,2.206,2.207,2.206
-h3.531C6.956,24.786,7.944,23.799,7.944,22.58z"
-          />
-          <path
-            d="M32.928,32.93c0.862-0.861,2.26-0.861,3.121,0l2.497,2.497c0.862,0.86,0.862,2.259,0,3.12s-2.259,0.861-3.121,0
-l-2.497-2.497C32.066,35.188,32.066,33.791,32.928,32.93z"
-          />
-          <path
-            d="M12.231,12.231c0.862-0.862,0.862-2.259,0-3.121L9.734,6.614c-0.862-0.862-2.259-0.862-3.121,0
-c-0.862,0.861-0.862,2.259,0,3.12l2.497,2.497C9.972,13.094,11.369,13.094,12.231,12.231z"
-          />
-        </svg>
-        <input
-          autocomplete="off"
-          class="jsx-3802520009 toggle-input"
-          id="toggle"
-          type="checkbox"
-        />
-        <label
-          class="jsx-3802520009 toggle-label"
-          for="toggle"
-        />
-        <svg
-          fill="gray"
-          height="30px"
-          viewBox="-12 0 448 448.04455"
-          width="30px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="m224.023438 448.03125c85.714843.902344 164.011718-48.488281 200.117187-126.230469-22.722656 9.914063-47.332031 14.769531-72.117187 14.230469-97.15625-.109375-175.890626-78.84375-176-176 .972656-65.71875 37.234374-125.832031 94.910156-157.351562-15.554688-1.980469-31.230469-2.867188-46.910156-2.648438-123.714844 0-224.0000005 100.289062-224.0000005 224 0 123.714844 100.2851565 224 224.0000005 224zm0 0"
-          />
-        </svg>
-      </div>
-      <div
-        class="jsx-3802520009 grid"
+        class="jsx-1260913401 grid my-10"
       >
         <a
-          class="jsx-3802520009 card"
+          class="jsx-1260913401 card"
           href="https://blog.ryu236.com"
         >
           <svg
@@ -118,18 +45,18 @@ c-0.862,0.861-0.862,2.259,0,3.12l2.497,2.497C9.972,13.094,11.369,13.094,12.231,1
             />
           </svg>
           <h3
-            class="jsx-3802520009"
+            class="jsx-1260913401"
           >
             Blog →
           </h3>
           <p
-            class="jsx-3802520009"
+            class="jsx-1260913401"
           >
             This is my blog. This blog is written by Japanese.
           </p>
         </a>
         <a
-          class="jsx-3802520009 card"
+          class="jsx-1260913401 card"
           href="https://github.com/Ryu236/"
         >
           <div
@@ -143,28 +70,29 @@ c-0.862,0.861-0.862,2.259,0,3.12l2.497,2.497C9.972,13.094,11.369,13.094,12.231,1
                 aria-hidden="true"
                 role="presentation"
                 src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
-                style="max-width: 100%; display: block;"
+                style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
               />
             </div>
+            <noscript />
             <img
               decoding="async"
               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-              style="visibility: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+              style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
             />
           </div>
           <h3
-            class="jsx-3802520009"
+            class="jsx-1260913401"
           >
             GitHub →
           </h3>
           <p
-            class="jsx-3802520009"
+            class="jsx-1260913401"
           >
             This is my github page. You can see my projects and code.
           </p>
         </a>
         <a
-          class="jsx-3802520009 card"
+          class="jsx-1260913401 card"
           href="https://twitter.com/Ryuk236"
         >
           <div
@@ -178,28 +106,29 @@ c-0.862,0.861-0.862,2.259,0,3.12l2.497,2.497C9.972,13.094,11.369,13.094,12.231,1
                 aria-hidden="true"
                 role="presentation"
                 src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
-                style="max-width: 100%; display: block;"
+                style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
               />
             </div>
+            <noscript />
             <img
               decoding="async"
               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-              style="visibility: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+              style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
             />
           </div>
           <h3
-            class="jsx-3802520009"
+            class="jsx-1260913401"
           >
             Twitter →
           </h3>
           <p
-            class="jsx-3802520009"
+            class="jsx-1260913401"
           >
             My twitter id is Ryuk236. Please follow me!
           </p>
         </a>
         <a
-          class="jsx-3802520009 card"
+          class="jsx-1260913401 card"
           href="https://www.wantedly.com/id/ryu236"
         >
           <div
@@ -213,33 +142,132 @@ c-0.862,0.861-0.862,2.259,0,3.12l2.497,2.497C9.972,13.094,11.369,13.094,12.231,1
                 aria-hidden="true"
                 role="presentation"
                 src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
-                style="max-width: 100%; display: block;"
+                style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
               />
             </div>
+            <noscript />
             <img
               decoding="async"
               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-              style="visibility: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+              style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
             />
           </div>
           <h3
-            class="jsx-3802520009"
+            class="jsx-1260913401"
           >
             Wantedly →
           </h3>
           <p
-            class="jsx-3802520009"
+            class="jsx-1260913401"
           >
             My profile page in Wantedly. Please check this.
           </p>
         </a>
       </div>
+      <article
+        class="prose lg:prose-xl text-left"
+      >
+        <div
+          class="text-center"
+        >
+          <h1>
+            Resume
+          </h1>
+          <h2>
+            Education
+          </h2>
+        </div>
+        <div
+          class="mx-4"
+        >
+          <div>
+            <p>
+              Apr 2017 - Mar 2019 
+            </p>
+            <div
+              class="ml-8"
+            >
+              <h3>
+                Shinshu University
+              </h3>
+              Graduate School of Science and Technology (Master's Program)
+            </div>
+          </div>
+          <div>
+            <p>
+              Apr 2013 - Mar 2017 
+            </p>
+            <div
+              class="ml-8"
+            >
+              <h3>
+                Shinshu University
+              </h3>
+              Faculty of Engineering Computer Science and Engineering
+            </div>
+          </div>
+        </div>
+        <h2
+          class="text-center"
+        >
+          Career History
+        </h2>
+        <div
+          class="mx-4"
+        >
+          <div>
+            <p>
+              Apr 2019 - Now 
+            </p>
+            <div
+              class="ml-8"
+            >
+              <h3>
+                DMM.com
+              </h3>
+              Software Engineer
+              <br />
+              Development of the payment platform
+            </div>
+          </div>
+          <div>
+            <p>
+              Sep 2018 - Sep 2018 
+            </p>
+            <div
+              class="ml-8"
+            >
+              <h3>
+                Eureka
+              </h3>
+              Internship 
+              <br />
+              Development of Android application
+            </div>
+          </div>
+          <div>
+            <p>
+              Sep 2017 - Sep 2017 
+            </p>
+            <div
+              class="ml-8"
+            >
+              <h3>
+                SONY
+              </h3>
+              Internship 
+              <br />
+              Development of embedded system
+            </div>
+          </div>
+        </div>
+      </article>
     </main>
     <footer
-      class="jsx-3802520009"
+      class="jsx-1260913401"
     >
       <a
-        class="jsx-3802520009"
+        class="jsx-1260913401"
         href="https://twitter.com/Ryuk236"
         rel="noopener noreferrer"
         target="_blank"
