@@ -128,7 +128,7 @@ export const Home = () => {
       <Head>
         <title>ryu236.com</title>
       </Head>
-      <main>
+      <main className="flex flex-col py-16 items-center">
         <h1 className="title">Ryu236</h1>
 
         <p className="text-xl mt-3">
@@ -197,15 +197,6 @@ export const Home = () => {
       </footer>
 
       <style jsx>{`
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
         footer {
           width: 100%;
           height: 100px;
@@ -223,16 +214,6 @@ export const Home = () => {
           display: flex;
           justify-content: center;
           align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
         }
 
         .title a:hover,
