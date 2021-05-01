@@ -129,7 +129,7 @@ export const Home = () => {
         <title>ryu236.com</title>
       </Head>
       <main className="flex flex-col py-16 items-center">
-        <h1 className="title">Ryu236</h1>
+        <h1 className="leading-5 text-5xl mb-6">Ryu236</h1>
 
         <p className="text-xl mt-3">
           Hi, my name is Ryutaro Kobayashi.
@@ -198,75 +198,6 @@ export const Home = () => {
       </footer>
 
       <style jsx>{`
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 3rem;
-        }
-
-        .toggle-switch {
-          width: 75px;
-          height: 42px;
-          margin: auto;
-        }
-
-        .toggle-label {
-          width: 68px;
-          height: 30px;
-          background: #ccc;
-          border-radius: 46px;
-          transition: 0.4s;
-          box-sizing: border-box;
-          margin: 0 10px;
-        }
-
-        .toggle-label:after {
-          content: '';
-          position: absolute;
-          width: 30px;
-          height: 30px;
-          border-radius: 100%;
-          left: 0;
-          top: 0;
-          z-index: 2;
-          background: #fff;
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-          transition: 0.4s;
-        }
-
-        .toggle-input {
-          display: none;
-        }
-        .toggle-input:checked + .toggle-label {
-          background-color: #4bd865;
-        }
-        .toggle-input:checked + .toggle-label:after {
-          left: 40px;
-        }
-
-        .sun svg {
-          fill: gray;
-        }
-
-        .moon {
-          fill: yellow;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
         .grid {
           display: flex;
           align-items: center;
