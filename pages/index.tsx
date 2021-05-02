@@ -129,7 +129,9 @@ export const Home = () => {
         <title>ryu236.com</title>
       </Head>
       <main className="flex flex-col py-16 items-center">
-        <h1 className="leading-5 text-5xl mb-6">Ryu236</h1>
+        <h1 className="leading-3 sm:leading-5 text-4xl sm:text-5xl mb-4 sm:mb-6">
+          Ryu236
+        </h1>
 
         <p className="text-xl mt-3">
           Hi, my name is Ryutaro Kobayashi.
