@@ -154,7 +154,7 @@ export const Home = () => {
         </div>
         */}
 
-        <div className="grid my-10">
+        <div className="flex flex-wrap flex-col sm:flex-row items-center justify-center max-w-4xl my-10">
           <a href="https://blog.ryu236.com" className="card">
             <Hatena fill={dark ? '#EEE' : '#333'} />
             <h3>Blog &rarr;</h3>
@@ -198,15 +198,6 @@ export const Home = () => {
       </footer>
 
       <style jsx>{`
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-        }
-
         .card {
           margin: 1rem;
           flex-basis: 45%;
@@ -239,13 +230,6 @@ export const Home = () => {
 
         .logo {
           height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
         }
       `}</style>
 
