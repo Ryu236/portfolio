@@ -201,15 +201,7 @@ export const Home = () => {
 
       <style jsx>{`
         .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 2px solid var(--border-color);
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
+          @apply m-4 p-6 w-auto md:w-5/12 flex-shrink-0 flex-grow text-left border-2 border-gray-200 rounded-xl;
         }
 
         .card:hover,
