@@ -207,23 +207,15 @@ export const Home = () => {
         .card:hover,
         .card:focus,
         .card:active {
-          color: var(--active-color);
-          border-color: var(--active-color);
+          @apply text-blue-500 border-blue-500;
         }
 
         .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
+          @apply mb-4 text-2xl;
         }
 
         .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
+          @apply m-0 text-xl leading-6;
         }
       `}</style>
 
