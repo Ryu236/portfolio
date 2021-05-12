@@ -220,26 +220,8 @@ export const Home = () => {
       `}</style>
 
       <style jsx global>{`
-        :root {
-          --active-color: #0070f3;
-          --border-color: #eaeaea;
-        }
-        [data-theme='dark'] {
-          --bg-color: #121212;
-          --text-color: #f4f4f6;
-          --active-color: #369bff;
-          --border-color: #5d6d7e;
-        }
-
-        main,
-        container,
-        footer {
-          background: var(--bg-color);
-          color: var(--text-color);
-        }
-
         * {
-          box-sizing: border-box;
+          @apply box-border;
         }
       `}</style>
     </div>
