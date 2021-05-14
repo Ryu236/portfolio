@@ -48,7 +48,10 @@
     "jest-watch-typeahead": "^0.5.0",
     "lint-staged": "^10.0.10",
     "postcss": "^8.2.13",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-preset-env": "^6.7.0",
     "prettier": "^2.2.1",
+    "styled-jsx-plugin-postcss": "^4.0.1",
     "tailwindcss": "^2.1.1",
     "typescript": "^3.8.3"
   }

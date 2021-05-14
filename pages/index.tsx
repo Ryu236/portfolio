@@ -128,8 +128,10 @@ export const Home = () => {
       <Head>
         <title>ryu236.com</title>
       </Head>
-      <main>
-        <h1 className="title">Ryu236</h1>
+      <main className="flex flex-col py-16 items-center">
+        <h1 className="leading-3 sm:leading-5 text-4xl sm:text-5xl mb-4 sm:mb-6">
+          Ryu236
+        </h1>
 
         <p className="text-xl mt-3">
           Hi, my name is Ryutaro Kobayashi.
@@ -154,7 +156,7 @@ export const Home = () => {
         </div>
         */}
 
-        <div className="grid my-10">
+        <div className="flex flex-wrap flex-col sm:flex-row items-center justify-center max-w-4xl my-10">
           <a href="https://blog.ryu236.com" className="card">
             <Hatena fill={dark ? '#EEE' : '#333'} />
             <h3>Blog &rarr;</h3>
@@ -186,8 +188,9 @@ export const Home = () => {
         <Resume />
       </main>
 
-      <footer>
+      <footer className="w-full h-20 flex justify-center border-t">
         <a
+          className="flex items-center"
           href="https://twitter.com/Ryuk236"
           target="_blank"
           rel="noopener noreferrer"
@@ -197,193 +200,22 @@ export const Home = () => {
       </footer>
 
       <style jsx>{`
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid var(--border-color);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 3rem;
-        }
-
-        .toggle-switch {
-          width: 75px;
-          height: 42px;
-          margin: auto;
-        }
-
-        .toggle-label {
-          width: 68px;
-          height: 30px;
-          background: #ccc;
-          border-radius: 46px;
-          transition: 0.4s;
-          box-sizing: border-box;
-          margin: 0 10px;
-        }
-
-        .toggle-label:after {
-          content: '';
-          position: absolute;
-          width: 30px;
-          height: 30px;
-          border-radius: 100%;
-          left: 0;
-          top: 0;
-          z-index: 2;
-          background: #fff;
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-          transition: 0.4s;
-        }
-
-        .toggle-input {
-          display: none;
-        }
-        .toggle-input:checked + .toggle-label {
-          background-color: #4bd865;
-        }
-        .toggle-input:checked + .toggle-label:after {
-          left: 40px;
-        }
-
-        .sun svg {
-          fill: gray;
-        }
-
-        .moon {
-          fill: yellow;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-        }
-
         .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 2px solid var(--border-color);
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
+          @apply m-4 p-6 w-auto md:w-5/12 flex-shrink-0 flex-grow text-left border-2 border-gray-200 rounded-xl;
         }
 
         .card:hover,
         .card:focus,
         .card:active {
-          color: var(--active-color);
-          border-color: var(--active-color);
+          @apply text-blue-500 border-blue-500;
         }
 
         .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
+          @apply mb-4 text-2xl;
         }
 
         .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        :root {
-          --active-color: #0070f3;
-          --border-color: #eaeaea;
-        }
-        [data-theme='dark'] {
-          --bg-color: #121212;
-          --text-color: #f4f4f6;
-          --active-color: #369bff;
-          --border-color: #5d6d7e;
-        }
-
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-        main,
-        container,
-        footer {
-          background: var(--bg-color);
-          color: var(--text-color);
-        }
-
-        * {
-          box-sizing: border-box;
+          @apply m-0 text-xl leading-6;
         }
       `}</style>
     </div>
