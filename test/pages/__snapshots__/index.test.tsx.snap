@@ -3,30 +3,30 @@
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="jsx-1260913401 flex flex-col mx-auto min-h-screen"
+    class="jsx-862575233 flex flex-col mx-auto min-h-screen"
   >
     <main
-      class="jsx-1260913401"
+      class="jsx-862575233 flex flex-col py-16 items-center"
     >
       <h1
-        class="jsx-1260913401 title"
+        class="jsx-862575233 leading-3 sm:leading-5 text-4xl sm:text-5xl mb-4 sm:mb-6"
       >
         Ryu236
       </h1>
       <p
-        class="jsx-1260913401 text-xl mt-3"
+        class="jsx-862575233 text-xl mt-3"
       >
         Hi, my name is Ryutaro Kobayashi.
         <br
-          class="jsx-1260913401"
+          class="jsx-862575233"
         />
         I am a software engineer in Japan.
       </p>
       <div
-        class="jsx-1260913401 grid my-10"
+        class="jsx-862575233 flex flex-wrap flex-col sm:flex-row items-center justify-center max-w-4xl my-10"
       >
         <a
-          class="jsx-1260913401 card"
+          class="jsx-862575233 card"
           href="https://blog.ryu236.com"
         >
           <svg
@@ -45,18 +45,18 @@ exports[`Home page matches snapshot 1`] = `
             />
           </svg>
           <h3
-            class="jsx-1260913401"
+            class="jsx-862575233"
           >
             Blog →
           </h3>
           <p
-            class="jsx-1260913401"
+            class="jsx-862575233"
           >
             This is my blog. This blog is written by Japanese.
           </p>
         </a>
         <a
-          class="jsx-1260913401 card"
+          class="jsx-862575233 card"
           href="https://github.com/Ryu236/"
         >
           <div
@@ -81,18 +81,18 @@ exports[`Home page matches snapshot 1`] = `
             />
           </div>
           <h3
-            class="jsx-1260913401"
+            class="jsx-862575233"
           >
             GitHub →
           </h3>
           <p
-            class="jsx-1260913401"
+            class="jsx-862575233"
           >
             This is my github page. You can see my projects and code.
           </p>
         </a>
         <a
-          class="jsx-1260913401 card"
+          class="jsx-862575233 card"
           href="https://twitter.com/Ryuk236"
         >
           <div
@@ -117,18 +117,18 @@ exports[`Home page matches snapshot 1`] = `
             />
           </div>
           <h3
-            class="jsx-1260913401"
+            class="jsx-862575233"
           >
             Twitter →
           </h3>
           <p
-            class="jsx-1260913401"
+            class="jsx-862575233"
           >
             My twitter id is Ryuk236. Please follow me!
           </p>
         </a>
         <a
-          class="jsx-1260913401 card"
+          class="jsx-862575233 card"
           href="https://www.wantedly.com/id/ryu236"
         >
           <div
@@ -153,12 +153,12 @@ exports[`Home page matches snapshot 1`] = `
             />
           </div>
           <h3
-            class="jsx-1260913401"
+            class="jsx-862575233"
           >
             Wantedly →
           </h3>
           <p
-            class="jsx-1260913401"
+            class="jsx-862575233"
           >
             My profile page in Wantedly. Please check this.
           </p>
@@ -264,10 +264,10 @@ exports[`Home page matches snapshot 1`] = `
       </article>
     </main>
     <footer
-      class="jsx-1260913401"
+      class="jsx-862575233 w-full h-20 flex justify-center border-t"
     >
       <a
-        class="jsx-1260913401"
+        class="jsx-862575233 flex items-center"
         href="https://twitter.com/Ryuk236"
         rel="noopener noreferrer"
         target="_blank"
