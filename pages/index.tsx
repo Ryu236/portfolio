@@ -218,12 +218,6 @@ export const Home = () => {
           @apply m-0 text-xl leading-6;
         }
       `}</style>
-
-      <style jsx global>{`
-        * {
-          @apply box-border;
-        }
-      `}</style>
     </div>
   )
 }
