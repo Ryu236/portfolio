@@ -115,13 +115,97 @@ export const Home: React.VFC = () => {
   */
   }
 
-  const GithubIcon = () => {
-    if (dark) {
-      return <Image src="/github_icon_large_white.svg" width={60} height={60} />
-    } else {
-      return <Image src="/github_icon_large_dark.svg" width={60} height={60} />
-    }
-  }
+  const GithubIcon = () => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="60px"
+      height="60px"
+      viewBox="0 0 120.775 117.794"
+    >
+      <g
+        id="Group_1"
+        data-name="Group 1"
+        transform="translate(-290.221 -58.431)"
+      >
+        <path
+          id="Path_2"
+          data-name="Path 2"
+          d="M350.609,58.431a60.394,60.394,0,0,0-19.091,117.69c3.018.558,4.126-1.311,4.126-2.906,0-1.439-.056-6.2-.082-11.243-16.8,3.654-20.345-7.125-20.345-7.125-2.747-6.979-6.705-8.836-6.705-8.836-5.479-3.748.413-3.671.413-3.671,6.064.426,9.257,6.224,9.257,6.224,5.386,9.231,14.127,6.563,17.573,5.02.542-3.9,2.107-6.568,3.834-8.076-13.413-1.526-27.513-6.705-27.513-29.844A23.37,23.37,0,0,1,318.3,99.456c-.627-1.522-2.694-7.663.585-15.982,0,0,5.071-1.622,16.611,6.191a57.254,57.254,0,0,1,30.243,0c11.526-7.813,16.59-6.191,16.59-6.191,3.287,8.319,1.219,14.46.592,15.982a23.324,23.324,0,0,1,6.215,16.208c0,23.195-14.127,28.3-27.574,29.8,2.166,1.875,4.1,5.549,4.1,11.183,0,8.08-.07,14.583-.07,16.572,0,1.608,1.087,3.491,4.148,2.9A60.4,60.4,0,0,0,350.609,58.431Z"
+          fill="#0f0c0d"
+          fillRule="evenodd"
+        />
+        <path
+          id="Path_3"
+          data-name="Path 3"
+          d="M313.093,145.134c-.133.3-.6.391-1.035.185s-.684-.607-.542-.907.6-.4,1.04-.189.689.611.537.911Zm-.743-.55"
+          fill="#0f0c0d"
+        />
+        <path
+          id="Path_4"
+          data-name="Path 4"
+          d="M315.539,147.863c-.288.266-.851.142-1.233-.279a.923.923,0,0,1-.177-1.255c.3-.267.843-.142,1.239.279s.472.984.171,1.255Zm-.576-.618"
+          fill="#0f0c0d"
+        />
+        <path
+          id="Path_5"
+          data-name="Path 5"
+          d="M317.92,151.34c-.37.258-.975.017-1.349-.52s-.37-1.182.008-1.44.971-.025,1.35.507.369,1.191-.009,1.453Zm0,0"
+          fill="#0f0c0d"
+        />
+        <path
+          id="Path_6"
+          data-name="Path 6"
+          d="M321.182,154.7c-.331.365-1.036.266-1.552-.232a1.161,1.161,0,0,1-.343-1.543c.335-.365,1.044-.262,1.564.232s.684,1.181.331,1.543Zm0,0"
+          fill="#0f0c0d"
+        />
+        <path
+          id="Path_7"
+          data-name="Path 7"
+          d="M325.682,156.652c-.146.472-.825.687-1.509.486s-1.13-.761-.992-1.238.824-.7,1.513-.485,1.13.755.988,1.237Zm0,0"
+          fill="#0f0c0d"
+        />
+        <path
+          id="Path_8"
+          data-name="Path 8"
+          d="M330.624,157.013c.017.5-.563.911-1.281.92s-1.306-.387-1.314-.877.567-.911,1.289-.924,1.306.387,1.306.881Zm0,0"
+          fill="#0f0c0d"
+        />
+        <path
+          id="Path_9"
+          data-name="Path 9"
+          d="M335.223,156.231c.086.485-.413.984-1.126,1.117s-1.35-.172-1.439-.653c-.087-.5.421-1,1.121-1.126s1.353.168,1.444.662Zm0,0"
+          fill="#0f0c0d"
+        />
+      </g>
+    </svg>
+  )
+
+  const TwitterIcon = () => (
+    <svg
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      x="0px"
+      y="0px"
+      viewBox="0 0 400 400"
+      width="60px"
+      height="60px"
+    >
+      <g id="Dark_Blue">
+        <circle fill="#1DA1F2" cx="200" cy="200" r="200" />
+      </g>
+      <g id="Logo__x2014__FIXED">
+        <path
+          fill="#FFF"
+          d="M163.4,305.5c88.7,0,137.2-73.5,137.2-137.2c0-2.1,0-4.2-0.1-6.2c9.4-6.8,17.6-15.3,24.1-25
+		c-8.6,3.8-17.9,6.4-27.7,7.6c10-6,17.6-15.4,21.2-26.7c-9.3,5.5-19.6,9.5-30.6,11.7c-8.8-9.4-21.3-15.2-35.2-15.2
+		c-26.6,0-48.2,21.6-48.2,48.2c0,3.8,0.4,7.5,1.3,11c-40.1-2-75.6-21.2-99.4-50.4c-4.1,7.1-6.5,15.4-6.5,24.2
+		c0,16.7,8.5,31.5,21.5,40.1c-7.9-0.2-15.3-2.4-21.8-6c0,0.2,0,0.4,0,0.6c0,23.4,16.6,42.8,38.7,47.3c-4,1.1-8.3,1.7-12.7,1.7
+		c-3.1,0-6.1-0.3-9.1-0.9c6.1,19.2,23.9,33.1,45,33.5c-16.5,12.9-37.3,20.6-59.9,20.6c-3.9,0-7.7-0.2-11.5-0.7
+		C110.8,297.5,136.2,305.5,163.4,305.5"
+        />
+      </g>
+    </svg>
+  )
 
   return (
     <div className="flex flex-col mx-auto min-h-screen">
@@ -156,33 +240,38 @@ export const Home: React.VFC = () => {
         </div>
         */}
 
-        <div className="flex flex-wrap flex-col sm:flex-row items-center justify-center max-w-4xl my-10">
-          <a href="https://blog.ryu236.com" className="card">
-            <Hatena fill={dark ? '#EEE' : '#333'} />
-            <h3>Blog &rarr;</h3>
-            <p>This is my blog. This blog is written by Japanese.</p>
-          </a>
-
-          <a href="https://github.com/Ryu236/" className="card">
+        <div className="flex flex-row items-center justify-center max-w-4xl my-10">
+          <a
+            className="sm:mx-6 mx-3"
+            href="https://github.com/Ryu236/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <GithubIcon />
-            <h3>GitHub &rarr;</h3>
-            <p>This is my github page. You can see my projects and code.</p>
           </a>
-
-          <a href="https://twitter.com/Ryuk236" className="card">
-            <Image
-              src="/Twitter_Social_Icon_Circle_Color.svg"
-              width={60}
-              height={60}
-            />
-            <h3>Twitter &rarr;</h3>
-            <p>My twitter id is Ryuk236. Please follow me!</p>
+          <a
+            className="sm:mx-6 mx-3"
+            href="https://twitter.com/Ryuk236"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <TwitterIcon />
           </a>
-
-          <a href="https://www.wantedly.com/id/ryu236" className="card">
-            <Image src="/wantedly_mark.svg" width={60} height={60} />
-            <h3>Wantedly &rarr;</h3>
-            <p>My profile page in Wantedly. Please check this.</p>
+          <a
+            className="sm:mx-6 mx-3"
+            href="https://blog.ryu236.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Hatena fill={dark ? '#EEE' : '#333'} />
+          </a>
+          <a
+            className="sm:mx-3"
+            href="https://www.wantedly.com/id/ryu236"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image src="/Wantedly_Mark_LightBG.svg" width={80} height={80} />
           </a>
         </div>
         <Resume />
@@ -198,26 +287,6 @@ export const Home: React.VFC = () => {
           © 2021 Ryutaro Kobayashi
         </a>
       </footer>
-
-      <style jsx>{`
-        .card {
-          @apply m-4 p-6 w-auto md:w-5/12 flex-shrink-0 flex-grow text-left border-2 border-gray-200 rounded-xl;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          @apply text-blue-500 border-blue-500;
-        }
-
-        .card h3 {
-          @apply mb-4 text-2xl;
-        }
-
-        .card p {
-          @apply m-0 text-xl leading-6;
-        }
-      `}</style>
     </div>
   )
 }
