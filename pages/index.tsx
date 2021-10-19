@@ -88,7 +88,7 @@ const Hatena = ({ fill }) => (
   </svg>
 )
 
-export const Home = () => {
+export const Home: React.VFC = () => {
   {
     /*
   let theme: string

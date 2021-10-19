@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Resume: React.VFC<{}> = () => {
+export const Resume: React.VFC = () => {
   return (
     <article className="prose lg:prose-xl text-left">
       <div className="text-center">
