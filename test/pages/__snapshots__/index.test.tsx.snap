@@ -3,31 +3,135 @@
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="jsx-862575233 flex flex-col mx-auto min-h-screen"
+    class="flex flex-col mx-auto min-h-screen"
   >
     <main
-      class="jsx-862575233 flex flex-col py-16 items-center"
+      class="flex flex-col py-16 items-center"
     >
       <h1
-        class="jsx-862575233 leading-3 sm:leading-5 text-4xl sm:text-5xl mb-4 sm:mb-6"
+        class="leading-3 sm:leading-5 text-4xl sm:text-5xl mb-4 sm:mb-6"
       >
         Ryu236
       </h1>
       <p
-        class="jsx-862575233 text-xl mt-3"
+        class="text-xl mt-3"
       >
         Hi, my name is Ryutaro Kobayashi.
-        <br
-          class="jsx-862575233"
-        />
+        <br />
         I am a software engineer in Japan.
       </p>
       <div
-        class="jsx-862575233 flex flex-wrap flex-col sm:flex-row items-center justify-center max-w-4xl my-10"
+        class="flex flex-row items-center justify-center max-w-4xl my-10"
       >
         <a
-          class="jsx-862575233 card"
+          class="sm:mx-6 mx-3"
+          href="https://github.com/Ryu236/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <svg
+            height="60px"
+            viewBox="0 0 120.775 117.794"
+            width="60px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              data-name="Group 1"
+              id="Group_1"
+              transform="translate(-290.221 -58.431)"
+            >
+              <path
+                d="M350.609,58.431a60.394,60.394,0,0,0-19.091,117.69c3.018.558,4.126-1.311,4.126-2.906,0-1.439-.056-6.2-.082-11.243-16.8,3.654-20.345-7.125-20.345-7.125-2.747-6.979-6.705-8.836-6.705-8.836-5.479-3.748.413-3.671.413-3.671,6.064.426,9.257,6.224,9.257,6.224,5.386,9.231,14.127,6.563,17.573,5.02.542-3.9,2.107-6.568,3.834-8.076-13.413-1.526-27.513-6.705-27.513-29.844A23.37,23.37,0,0,1,318.3,99.456c-.627-1.522-2.694-7.663.585-15.982,0,0,5.071-1.622,16.611,6.191a57.254,57.254,0,0,1,30.243,0c11.526-7.813,16.59-6.191,16.59-6.191,3.287,8.319,1.219,14.46.592,15.982a23.324,23.324,0,0,1,6.215,16.208c0,23.195-14.127,28.3-27.574,29.8,2.166,1.875,4.1,5.549,4.1,11.183,0,8.08-.07,14.583-.07,16.572,0,1.608,1.087,3.491,4.148,2.9A60.4,60.4,0,0,0,350.609,58.431Z"
+                data-name="Path 2"
+                fill="#0f0c0d"
+                fill-rule="evenodd"
+                id="Path_2"
+              />
+              <path
+                d="M313.093,145.134c-.133.3-.6.391-1.035.185s-.684-.607-.542-.907.6-.4,1.04-.189.689.611.537.911Zm-.743-.55"
+                data-name="Path 3"
+                fill="#0f0c0d"
+                id="Path_3"
+              />
+              <path
+                d="M315.539,147.863c-.288.266-.851.142-1.233-.279a.923.923,0,0,1-.177-1.255c.3-.267.843-.142,1.239.279s.472.984.171,1.255Zm-.576-.618"
+                data-name="Path 4"
+                fill="#0f0c0d"
+                id="Path_4"
+              />
+              <path
+                d="M317.92,151.34c-.37.258-.975.017-1.349-.52s-.37-1.182.008-1.44.971-.025,1.35.507.369,1.191-.009,1.453Zm0,0"
+                data-name="Path 5"
+                fill="#0f0c0d"
+                id="Path_5"
+              />
+              <path
+                d="M321.182,154.7c-.331.365-1.036.266-1.552-.232a1.161,1.161,0,0,1-.343-1.543c.335-.365,1.044-.262,1.564.232s.684,1.181.331,1.543Zm0,0"
+                data-name="Path 6"
+                fill="#0f0c0d"
+                id="Path_6"
+              />
+              <path
+                d="M325.682,156.652c-.146.472-.825.687-1.509.486s-1.13-.761-.992-1.238.824-.7,1.513-.485,1.13.755.988,1.237Zm0,0"
+                data-name="Path 7"
+                fill="#0f0c0d"
+                id="Path_7"
+              />
+              <path
+                d="M330.624,157.013c.017.5-.563.911-1.281.92s-1.306-.387-1.314-.877.567-.911,1.289-.924,1.306.387,1.306.881Zm0,0"
+                data-name="Path 8"
+                fill="#0f0c0d"
+                id="Path_8"
+              />
+              <path
+                d="M335.223,156.231c.086.485-.413.984-1.126,1.117s-1.35-.172-1.439-.653c-.087-.5.421-1,1.121-1.126s1.353.168,1.444.662Zm0,0"
+                data-name="Path 9"
+                fill="#0f0c0d"
+                id="Path_9"
+              />
+            </g>
+          </svg>
+        </a>
+        <a
+          class="sm:mx-6 mx-3"
+          href="https://twitter.com/Ryuk236"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <svg
+            height="60px"
+            version="1.1"
+            viewBox="0 0 400 400"
+            width="60px"
+            x="0px"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0px"
+          >
+            <g
+              id="Dark_Blue"
+            >
+              <circle
+                cx="200"
+                cy="200"
+                fill="#1DA1F2"
+                r="200"
+              />
+            </g>
+            <g
+              id="Logo__x2014__FIXED"
+            >
+              <path
+                d="M163.4,305.5c88.7,0,137.2-73.5,137.2-137.2c0-2.1,0-4.2-0.1-6.2c9.4-6.8,17.6-15.3,24.1-25 c-8.6,3.8-17.9,6.4-27.7,7.6c10-6,17.6-15.4,21.2-26.7c-9.3,5.5-19.6,9.5-30.6,11.7c-8.8-9.4-21.3-15.2-35.2-15.2 c-26.6,0-48.2,21.6-48.2,48.2c0,3.8,0.4,7.5,1.3,11c-40.1-2-75.6-21.2-99.4-50.4c-4.1,7.1-6.5,15.4-6.5,24.2 c0,16.7,8.5,31.5,21.5,40.1c-7.9-0.2-15.3-2.4-21.8-6c0,0.2,0,0.4,0,0.6c0,23.4,16.6,42.8,38.7,47.3c-4,1.1-8.3,1.7-12.7,1.7 c-3.1,0-6.1-0.3-9.1-0.9c6.1,19.2,23.9,33.1,45,33.5c-16.5,12.9-37.3,20.6-59.9,20.6c-3.9,0-7.7-0.2-11.5-0.7 C110.8,297.5,136.2,305.5,163.4,305.5"
+                fill="#FFF"
+              />
+            </g>
+          </svg>
+        </a>
+        <a
+          class="sm:mx-6 mx-3"
           href="https://blog.ryu236.com"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           <svg
             height="60px"
@@ -44,92 +148,12 @@ exports[`Home page matches snapshot 1`] = `
               fill="#333"
             />
           </svg>
-          <h3
-            class="jsx-862575233"
-          >
-            Blog →
-          </h3>
-          <p
-            class="jsx-862575233"
-          >
-            This is my blog. This blog is written by Japanese.
-          </p>
         </a>
         <a
-          class="jsx-862575233 card"
-          href="https://github.com/Ryu236/"
-        >
-          <div
-            style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
-          >
-            <div
-              style="box-sizing: border-box; display: block; max-width: 100%;"
-            >
-              <img
-                alt=""
-                aria-hidden="true"
-                role="presentation"
-                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
-                style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
-              />
-            </div>
-            <noscript />
-            <img
-              decoding="async"
-              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-              style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
-            />
-          </div>
-          <h3
-            class="jsx-862575233"
-          >
-            GitHub →
-          </h3>
-          <p
-            class="jsx-862575233"
-          >
-            This is my github page. You can see my projects and code.
-          </p>
-        </a>
-        <a
-          class="jsx-862575233 card"
-          href="https://twitter.com/Ryuk236"
-        >
-          <div
-            style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
-          >
-            <div
-              style="box-sizing: border-box; display: block; max-width: 100%;"
-            >
-              <img
-                alt=""
-                aria-hidden="true"
-                role="presentation"
-                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
-                style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
-              />
-            </div>
-            <noscript />
-            <img
-              decoding="async"
-              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-              style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
-            />
-          </div>
-          <h3
-            class="jsx-862575233"
-          >
-            Twitter →
-          </h3>
-          <p
-            class="jsx-862575233"
-          >
-            My twitter id is Ryuk236. Please follow me!
-          </p>
-        </a>
-        <a
-          class="jsx-862575233 card"
+          class="sm:mx-3"
           href="https://www.wantedly.com/id/ryu236"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           <div
             style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
@@ -140,28 +164,18 @@ exports[`Home page matches snapshot 1`] = `
               <img
                 alt=""
                 aria-hidden="true"
-                role="presentation"
-                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
+                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
                 style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
               />
             </div>
-            <noscript />
             <img
+              data-nimg="intrinsic"
               decoding="async"
               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
               style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
             />
+            <noscript />
           </div>
-          <h3
-            class="jsx-862575233"
-          >
-            Wantedly →
-          </h3>
-          <p
-            class="jsx-862575233"
-          >
-            My profile page in Wantedly. Please check this.
-          </p>
         </a>
       </div>
       <article
@@ -264,10 +278,10 @@ exports[`Home page matches snapshot 1`] = `
       </article>
     </main>
     <footer
-      class="jsx-862575233 w-full h-20 flex justify-center border-t"
+      class="w-full h-20 flex justify-center border-t"
     >
       <a
-        class="jsx-862575233 flex items-center"
+        class="flex items-center"
         href="https://twitter.com/Ryuk236"
         rel="noopener noreferrer"
         target="_blank"
