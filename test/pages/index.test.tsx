@@ -12,8 +12,32 @@ describe('Home page', () => {
     render(<Home />)
 
     const description = screen.getByText(
-      /Hi, my name is Ryutaro Kobayashi.I am a software engineer in Japan./i
+      'Hi, my name is Ryutaro Kobayashi.I am a software engineer in Japan.'
     )
+
+    expect(description).toBeInTheDocument()
+  })
+
+  it('should render the resume', () => {
+    render(<Home />)
+
+    const description = screen.getByText('Resume')
+
+    expect(description).toBeInTheDocument()
+  })
+
+  it('should render the work experience', () => {
+    render(<Home />)
+
+    const description = screen.getByText('Work Experience')
+
+    expect(description).toBeInTheDocument()
+  })
+
+  it('should render the education', () => {
+    render(<Home />)
+
+    const description = screen.getByText('Education')
 
     expect(description).toBeInTheDocument()
   })
