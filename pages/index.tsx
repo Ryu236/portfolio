@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-import { Resume } from '../components/parts/resume'
+import { Resume } from '../components/resume'
 
 {
   /*

@@ -2,29 +2,11 @@ import React from 'react'
 
 export const Resume: React.VFC = () => {
   return (
-    <article className="prose lg:prose-xl text-left">
+    <article className="prose prose-h3:mt-0 lg:prose-p:mt-16 prose-p:mt-10 lg:prose-xl text-left">
       <div className="text-center">
         <h1>Resume</h1>
-        <h2>Education</h2>
       </div>
-      <div className="mx-4">
-        <div>
-          <p>Apr 2017 - Mar 2019 </p>
-          <div className="ml-8">
-            <h3>Shinshu University</h3>
-            Graduate School of Science and Technology (Master&#39;s Program)
-          </div>
-        </div>
-        <div>
-          <p>Apr 2013 - Mar 2017 </p>
-          <div className="ml-8">
-            <h3>Shinshu University</h3>
-            Faculty of Engineering Computer Science and Engineering
-          </div>
-        </div>
-      </div>
-
-      <h2 className="text-center">Career History</h2>
+      <h2 className="text-center">Work Experience</h2>
       <div className="mx-4">
         <div>
           <p>Apr 2019 - Now </p>
@@ -49,6 +31,30 @@ export const Resume: React.VFC = () => {
             <h3>SONY</h3>
             Internship <br />
             Development of embedded system
+          </div>
+        </div>
+      </div>
+
+      <div className="text-center">
+        <h2>Education</h2>
+      </div>
+      <div className="mx-4">
+        <div>
+          <p>Apr 2017 - Mar 2019 </p>
+          <div className="ml-8">
+            <h3>Shinshu University</h3>
+            Japan
+            <br />
+            Master of Science and Technology
+          </div>
+        </div>
+        <div>
+          <p>Apr 2013 - Mar 2017 </p>
+          <div className="ml-8">
+            <h3>Shinshu University</h3>
+            Japan
+            <br />
+            Bachelor of Computer Science and Engineering
           </div>
         </div>
       </div>

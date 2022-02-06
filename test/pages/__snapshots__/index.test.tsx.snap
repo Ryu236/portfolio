@@ -179,7 +179,7 @@ exports[`Home page matches snapshot 1`] = `
         </a>
       </div>
       <article
-        class="prose lg:prose-xl text-left"
+        class="prose prose-h3:mt-0 lg:prose-p:mt-16 prose-p:mt-10 lg:prose-xl text-left"
       >
         <div
           class="text-center"
@@ -187,44 +187,11 @@ exports[`Home page matches snapshot 1`] = `
           <h1>
             Resume
           </h1>
-          <h2>
-            Education
-          </h2>
-        </div>
-        <div
-          class="mx-4"
-        >
-          <div>
-            <p>
-              Apr 2017 - Mar 2019 
-            </p>
-            <div
-              class="ml-8"
-            >
-              <h3>
-                Shinshu University
-              </h3>
-              Graduate School of Science and Technology (Master's Program)
-            </div>
-          </div>
-          <div>
-            <p>
-              Apr 2013 - Mar 2017 
-            </p>
-            <div
-              class="ml-8"
-            >
-              <h3>
-                Shinshu University
-              </h3>
-              Faculty of Engineering Computer Science and Engineering
-            </div>
-          </div>
         </div>
         <h2
           class="text-center"
         >
-          Career History
+          Work Experience
         </h2>
         <div
           class="mx-4"
@@ -272,6 +239,47 @@ exports[`Home page matches snapshot 1`] = `
               Internship 
               <br />
               Development of embedded system
+            </div>
+          </div>
+        </div>
+        <div
+          class="text-center"
+        >
+          <h2>
+            Education
+          </h2>
+        </div>
+        <div
+          class="mx-4"
+        >
+          <div>
+            <p>
+              Apr 2017 - Mar 2019 
+            </p>
+            <div
+              class="ml-8"
+            >
+              <h3>
+                Shinshu University
+              </h3>
+              Japan
+              <br />
+              Master of Science and Technology
+            </div>
+          </div>
+          <div>
+            <p>
+              Apr 2013 - Mar 2017 
+            </p>
+            <div
+              class="ml-8"
+            >
+              <h3>
+                Shinshu University
+              </h3>
+              Japan
+              <br />
+              Bachelor of Computer Science and Engineering
             </div>
           </div>
         </div>
