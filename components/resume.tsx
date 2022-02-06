@@ -42,14 +42,18 @@ export const Resume: React.VFC = () => {
         <div>
           <p>Apr 2017 - Mar 2019 </p>
           <div className="ml-8">
-            <h3>Shinshu University, Japan</h3>
+            <h3>Shinshu University</h3>
+            Japan
+            <br />
             Master of Science and Technology
           </div>
         </div>
         <div>
           <p>Apr 2013 - Mar 2017 </p>
           <div className="ml-8">
-            <h3>Shinshu University, Japan</h3>
+            <h3>Shinshu University</h3>
+            Japan
+            <br />
             Bachelor of Computer Science and Engineering
           </div>
         </div>
