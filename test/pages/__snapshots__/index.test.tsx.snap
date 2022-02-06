@@ -179,7 +179,7 @@ exports[`Home page matches snapshot 1`] = `
         </a>
       </div>
       <article
-        class="prose lg:prose-xl text-left"
+        class="prose prose-h3:mt-0 lg:prose-p:mt-16 prose-p:mt-10 lg:prose-xl text-left"
       >
         <div
           class="text-center"
