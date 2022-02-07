@@ -12,7 +12,7 @@ export const Resume: React.VFC = () => {
           <p>May 2021 - Now </p>
           <div className="ml-8">
             <h3>GANGAN Inc.</h3>
-            Software Engineer - side job
+            Software Engineer （side job）
             <br />
             Development of the application
           </div>
