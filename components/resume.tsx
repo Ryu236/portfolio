@@ -9,18 +9,27 @@ export const Resume: React.VFC = () => {
       <h2 className="text-center">Work Experience</h2>
       <div className="mx-4">
         <div>
+          <p>May 2021 - Now </p>
+          <div className="ml-8">
+            <h3>GANGAN Inc.</h3>
+            Software Engineer （side job）
+            <br />
+            Development of the application
+          </div>
+        </div>
+        <div>
           <p>Apr 2019 - Now </p>
           <div className="ml-8">
-            <h3>DMM.com</h3>
+            <h3>DMM.com LLC</h3>
             Software Engineer
             <br />
-            Development of the payment platform
+            Development, maintenance and operation of the payment platform
           </div>
         </div>
         <div>
           <p>Sep 2018 - Sep 2018 </p>
           <div className="ml-8">
-            <h3>Eureka</h3>
+            <h3>Eureka, Inc.</h3>
             Internship <br />
             Development of Android application
           </div>
@@ -28,7 +37,7 @@ export const Resume: React.VFC = () => {
         <div>
           <p>Sep 2017 - Sep 2017 </p>
           <div className="ml-8">
-            <h3>SONY</h3>
+            <h3>Sony Corporation</h3>
             Internship <br />
             Development of embedded system
           </div>

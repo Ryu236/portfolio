@@ -198,17 +198,32 @@ exports[`Home page matches snapshot 1`] = `
         >
           <div>
             <p>
+              May 2021 - Now 
+            </p>
+            <div
+              class="ml-8"
+            >
+              <h3>
+                GANGAN Inc.
+              </h3>
+              Software Engineer （side job）
+              <br />
+              Development of the application
+            </div>
+          </div>
+          <div>
+            <p>
               Apr 2019 - Now 
             </p>
             <div
               class="ml-8"
             >
               <h3>
-                DMM.com
+                DMM.com LLC
               </h3>
               Software Engineer
               <br />
-              Development of the payment platform
+              Development, maintenance and operation of the payment platform
             </div>
           </div>
           <div>
@@ -219,7 +234,7 @@ exports[`Home page matches snapshot 1`] = `
               class="ml-8"
             >
               <h3>
-                Eureka
+                Eureka, Inc.
               </h3>
               Internship 
               <br />
@@ -234,7 +249,7 @@ exports[`Home page matches snapshot 1`] = `
               class="ml-8"
             >
               <h3>
-                SONY
+                Sony Corporation
               </h3>
               Internship 
               <br />
