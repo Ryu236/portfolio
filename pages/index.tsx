@@ -91,28 +91,28 @@ const Hatena = ({ fill }) => (
 export const Home: React.VFC = () => {
   {
     /*
-  let theme: string
-
-  const [dark, useDark] = useState(false)
-  */
+     * let theme: string
+     *
+     * const [dark, useDark] = useState(false)
+     */
   }
   const dark = false
 
   {
     /*
-  const SwitchTheme = () => {
-    theme = document.documentElement.dataset.theme
-    //console.log(theme)
-    //console.log(isDarkMode)
-    if (theme === 'dark') {
-      useDark(false)
-      document.documentElement.dataset.theme = 'light'
-    } else {
-      useDark(true)
-      document.documentElement.dataset.theme = 'dark'
-    }
-  }
-  */
+     * const SwitchTheme = () => {
+     *   theme = document.documentElement.dataset.theme
+     *   //console.log(theme)
+     *   //console.log(isDarkMode)
+     *   if (theme === 'dark') {
+     *   useDark(false)
+     *   document.documentElement.dataset.theme = 'light'
+     *   } else {
+     *   useDark(true)
+     *     document.documentElement.dataset.theme = 'dark'
+     *   }
+     * }
+     */
   }
 
   const GithubIcon = () => (
