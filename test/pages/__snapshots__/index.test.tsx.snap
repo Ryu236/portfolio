@@ -198,7 +198,7 @@ exports[`Home page matches snapshot 1`] = `
         >
           <div>
             <p>
-              May 2021 - Now 
+              May 2021 - Jan 2022
             </p>
             <div
               class="ml-8"
@@ -206,7 +206,7 @@ exports[`Home page matches snapshot 1`] = `
               <h3>
                 GANGAN Inc.
               </h3>
-              Software Engineer （side job）
+              Software Engineer（side job）
               <br />
               Development of the application
             </div>
