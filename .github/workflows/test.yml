@@ -4,9 +4,7 @@ name: CI
 
 # Controls when the action will run.
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [main]
+  # Triggers the workflow on pull request events but only for the main branch
   pull_request:
     branches: [main]
 
@@ -21,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: ['v12', 'v14', 'v16']
+        node: ['v14', 'v16']
 
     name: Node ${{ matrix.node }} build
     # Steps represent a sequence of tasks that will be executed as part of the job
