@@ -191,7 +191,7 @@ exports[`Home page matches snapshot 1`] = `
         <h2
           class="text-center"
         >
-          Work Experience
+          Experience
         </h2>
         <div
           class="mx-4"
@@ -206,7 +206,7 @@ exports[`Home page matches snapshot 1`] = `
               <h3>
                 GANGAN Inc.
               </h3>
-              Software Engineer（side job）
+              Software Engineer（side job） 
               <br />
               Development of the application
             </div>
@@ -221,7 +221,7 @@ exports[`Home page matches snapshot 1`] = `
               <h3>
                 DMM.com LLC
               </h3>
-              Software Engineer
+              Software Engineer 
               <br />
               Development, maintenance and operation of the payment platform
             </div>
@@ -277,9 +277,11 @@ exports[`Home page matches snapshot 1`] = `
               <h3>
                 Shinshu University
               </h3>
-              Japan
+              Japan 
               <br />
-              Master of Science and Technology
+              Master of Science and Technology 
+              <br />
+              Electrical and Computer Engineering Division
             </div>
           </div>
           <div>
@@ -292,7 +294,7 @@ exports[`Home page matches snapshot 1`] = `
               <h3>
                 Shinshu University
               </h3>
-              Japan
+              Japan 
               <br />
               Bachelor of Computer Science and Engineering
             </div>
