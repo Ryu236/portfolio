@@ -29,7 +29,7 @@ describe('Home page', () => {
   it('should render the work experience', () => {
     render(<Home />)
 
-    const description = screen.getByText('Work Experience')
+    const description = screen.getByText('Experience')
 
     expect(description).toBeInTheDocument()
   })
