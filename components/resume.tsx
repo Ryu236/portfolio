@@ -12,7 +12,7 @@ export const Resume: React.VFC = () => {
           <p>May 2021 - Jan 2022</p>
           <div className="ml-8">
             <h3>GANGAN Inc.</h3>
-            Software Engineer（side job） <br/>
+            Software Engineer（side job） <br />
             Development of the application
           </div>
         </div>
@@ -20,7 +20,7 @@ export const Resume: React.VFC = () => {
           <p>Apr 2019 - Now </p>
           <div className="ml-8">
             <h3>DMM.com LLC</h3>
-            Software Engineer <br/>
+            Software Engineer <br />
             Development, maintenance and operation of the payment platform
           </div>
         </div>
@@ -28,7 +28,7 @@ export const Resume: React.VFC = () => {
           <p>Sep 2018 - Sep 2018 </p>
           <div className="ml-8">
             <h3>Eureka, Inc.</h3>
-            Internship <br/>
+            Internship <br />
             Development of Android application
           </div>
         </div>
@@ -36,7 +36,7 @@ export const Resume: React.VFC = () => {
           <p>Sep 2017 - Sep 2017 </p>
           <div className="ml-8">
             <h3>Sony Corporation</h3>
-            Internship <br/>
+            Internship <br />
             Development of embedded system
           </div>
         </div>
@@ -50,8 +50,8 @@ export const Resume: React.VFC = () => {
           <p>Apr 2017 - Mar 2019 </p>
           <div className="ml-8">
             <h3>Shinshu University</h3>
-            Japan <br/>
-            Master of Science and Technology <br/>
+            Japan <br />
+            Master of Science and Technology <br />
             Electrical and Computer Engineering Division
           </div>
         </div>
@@ -59,7 +59,7 @@ export const Resume: React.VFC = () => {
           <p>Apr 2013 - Mar 2017 </p>
           <div className="ml-8">
             <h3>Shinshu University</h3>
-            Japan <br/>
+            Japan <br />
             Bachelor of Computer Science and Engineering
           </div>
         </div>
