@@ -9,15 +9,23 @@ export const Resume: React.VFC = () => {
       <h2 className="text-center">Experience</h2>
       <div className="mx-4">
         <div>
-          <p>May 2021 - Jan 2022</p>
+          <p>Mar 2023 - Now</p>
           <div className="ml-8">
-            <h3>GANGAN Inc.</h3>
-            Software Engineer（side job） <br />
+            <h3>UPSIDER, Inc.</h3>
+            Backend Engineer <br />
             Development of the application
           </div>
         </div>
         <div>
-          <p>Apr 2019 - Now </p>
+          <p>May 2021 - Jan 2022</p>
+          <div className="ml-8">
+            <h3>GANGAN Inc.</h3>
+            Backend Engineer（side job） <br />
+            Development of the application
+          </div>
+        </div>
+        <div>
+          <p>Apr 2019 - Feb 2023</p>
           <div className="ml-8">
             <h3>DMM.com LLC</h3>
             Software Engineer <br />
