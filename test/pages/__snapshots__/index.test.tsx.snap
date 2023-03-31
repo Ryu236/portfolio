@@ -213,21 +213,6 @@ exports[`Home page matches snapshot 1`] = `
           </div>
           <div>
             <p>
-              May 2021 - Jan 2022
-            </p>
-            <div
-              class="ml-8"
-            >
-              <h3>
-                GANGAN Inc.
-              </h3>
-              Backend Engineer（side job） 
-              <br />
-              Development of the application
-            </div>
-          </div>
-          <div>
-            <p>
               Apr 2019 - Feb 2023
             </p>
             <div
@@ -239,6 +224,21 @@ exports[`Home page matches snapshot 1`] = `
               Software Engineer 
               <br />
               Development, maintenance and operation of the payment platform
+            </div>
+          </div>
+          <div>
+            <p>
+              May 2021 - Jan 2022
+            </p>
+            <div
+              class="ml-8"
+            >
+              <h3>
+                GANGAN Inc.
+              </h3>
+              Backend Engineer（side job） 
+              <br />
+              Development of the application
             </div>
           </div>
           <div>
