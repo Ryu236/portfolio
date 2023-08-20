@@ -271,7 +271,12 @@ export const Home: React.VFC = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image src="/Wantedly_Mark_LightBG.svg" width={80} height={80} />
+            <Image
+              src="/Wantedly_Mark_LightBG.svg"
+              alt="wantedly"
+              width={80}
+              height={80}
+            />
           </a>
         </div>
         <Resume />
