@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: ['v14', 'v16']
+        node: ['v18', 'v20']
 
     name: Node ${{ matrix.node }} build
     # Steps represent a sequence of tasks that will be executed as part of the job
