@@ -1,5 +1,6 @@
 {
-  "extends": ["config:base"]
+  "extends": ["config:base"],
+  "labels": ["dependencies"],
   "packageRules": [
     {
       "description": "Automerge non-major updates",
