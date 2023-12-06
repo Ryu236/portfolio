@@ -197,6 +197,21 @@ exports[`Home page matches snapshot 1`] = `
           </div>
           <div>
             <p>
+              Apr 2023 - Present
+            </p>
+            <div
+              class="ml-8"
+            >
+              <h3>
+                Shiftbase, Inc.
+              </h3>
+              Backend Engineer（side job） 
+              <br />
+              Development of the web application
+            </div>
+          </div>
+          <div>
+            <p>
               Apr 2019 - Feb 2023
             </p>
             <div
@@ -218,7 +233,7 @@ exports[`Home page matches snapshot 1`] = `
               class="ml-8"
             >
               <h3>
-                GANGAN Inc.
+                GANGAN, Inc.
               </h3>
               Backend Engineer（side job） 
               <br />
