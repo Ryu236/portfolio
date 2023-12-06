@@ -9,11 +9,11 @@ export const Resume: React.VFC = () => {
       <h2 className="text-center">Experience</h2>
       <div className="mx-4">
         <div>
-          <p>Mar 2023 - Now</p>
+          <p>Mar 2023 - Present</p>
           <div className="ml-8">
             <h3>UPSIDER, Inc.</h3>
             Backend Engineer <br />
-            Development of the application
+            Development of the web application and payment card processing system
           </div>
         </div>
         <div>

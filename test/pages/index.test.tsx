@@ -12,7 +12,7 @@ describe('Home page', () => {
     render(<Home />)
 
     const description = screen.getByText(
-      'Hi, my name is Ryutaro Kobayashi.I am a software engineer in Japan.'
+      'Hi, my name is Ryutaro Kobayashi.I am a software engineer in Japan.',
     )
 
     expect(description).toBeInTheDocument()
