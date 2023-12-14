@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Resume: React.VFC = () => {
   return (
-    <article className="prose prose-h3:mt-0 lg:prose-p:mt-16 prose-p:mt-10 lg:prose-xl text-left">
+    <article className="prose prose-h3:mt-0 lg:prose-p:mt-16 prose-p:mt-10 lg:prose-xl text-left mt-24">
       <div className="text-center">
         <h1>Resume</h1>
       </div>
@@ -59,7 +59,7 @@ export const Resume: React.VFC = () => {
         </div>
       </div>
 
-      <div className="text-center">
+      <div className="text-center mt-20">
         <h2>Education</h2>
       </div>
       <div className="mx-4">
