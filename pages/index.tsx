@@ -205,11 +205,11 @@ export const Home: React.VFC = () => {
         <title>ryu236.com</title>
       </Head>
       <main className="flex flex-col py-16 items-center">
-        <h1 className="leading-3 sm:leading-5 text-4xl sm:text-5xl mb-4 sm:mb-6">
+        <h1 className="leading-3 sm:leading-5 text-4xl sm:text-5xl mt-16 sm:mt-16">
           Ryu236
         </h1>
 
-        <p className="text-xl mt-3">
+        <p className="text-2xl mt-16">
           Hi, my name is Ryutaro Kobayashi.
           <br />I am a software engineer in Japan.
         </p>
@@ -232,7 +232,7 @@ export const Home: React.VFC = () => {
         </div>
         */}
 
-        <div className="flex flex-row items-center justify-center max-w-4xl my-10">
+        <div className="flex flex-row items-center justify-center max-w-4xl mt-16">
           <a
             className="sm:mx-6 mx-3"
             href="https://github.com/Ryu236/"
@@ -274,7 +274,7 @@ export const Home: React.VFC = () => {
         <Resume />
       </main>
 
-      <footer className="w-full h-20 flex justify-center border-t">
+      <footer className="w-full h-20 flex justify-center border-t mt-10">
         <a
           className="flex items-center"
           href="https://twitter.com/Ryuk236"
