@@ -18,7 +18,7 @@ export const Resume: React.VFC = () => {
           </div>
         </div>
         <div>
-          <p>Apr 2023 - Present</p>
+          <p>Apr 2023 - Jan 2024</p>
           <div className="ml-8">
             <h3>Shiftbase, Inc.</h3>
             Backend Engineer（side job） <br />
