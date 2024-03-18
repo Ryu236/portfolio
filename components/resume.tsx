@@ -1,17 +1,15 @@
 import React from 'react'
 
-export const Resume: React.VFC = () => {
+export const Resume: React.FC = () => {
   return (
-    <article className="prose prose-h3:mt-0 lg:prose-p:mt-16 prose-p:mt-10 lg:prose-xl text-left mt-24">
-      <div className="text-center">
-        <h1>Resume</h1>
-      </div>
-      <h2 className="text-center">Experience</h2>
+    <article className="prose prose-h3:mt-0 lg:prose-p:mt-16 prose-p:mt-10 lg:prose-xl text-left mt-24 dark:text-white">
+      <h1 className="text-center dark:text-white">Resume</h1>
+      <h2 className="text-center dark:text-white">Experience</h2>
       <div className="mx-4">
         <div>
           <p>Mar 2023 - Present</p>
           <div className="ml-8">
-            <h3>UPSIDER, Inc.</h3>
+            <h3 className="dark:text-white">UPSIDER, Inc.</h3>
             Backend Engineer <br />
             Development of the web application and payment card processing
             system
@@ -20,7 +18,7 @@ export const Resume: React.VFC = () => {
         <div>
           <p>Apr 2023 - Jan 2024</p>
           <div className="ml-8">
-            <h3>Shiftbase, Inc.</h3>
+            <h3 className="dark:text-white">Shiftbase, Inc.</h3>
             Backend Engineer（side job） <br />
             Development of the web application
           </div>
@@ -28,7 +26,7 @@ export const Resume: React.VFC = () => {
         <div>
           <p>Apr 2019 - Feb 2023</p>
           <div className="ml-8">
-            <h3>DMM.com LLC</h3>
+            <h3 className="dark:text-white">DMM.com LLC</h3>
             Software Engineer <br />
             Development, maintenance and operation of the payment platform
           </div>
@@ -36,7 +34,7 @@ export const Resume: React.VFC = () => {
         <div>
           <p>May 2021 - Jan 2022</p>
           <div className="ml-8">
-            <h3>GANGAN, Inc.</h3>
+            <h3 className="dark:text-white">GANGAN, Inc.</h3>
             Backend Engineer（side job） <br />
             Development of the application
           </div>
@@ -44,7 +42,7 @@ export const Resume: React.VFC = () => {
         <div>
           <p>Sep 2018 - Sep 2018 </p>
           <div className="ml-8">
-            <h3>Eureka, Inc.</h3>
+            <h3 className="dark:text-white">Eureka, Inc.</h3>
             Internship <br />
             Development of Android application
           </div>
@@ -52,21 +50,19 @@ export const Resume: React.VFC = () => {
         <div>
           <p>Sep 2017 - Sep 2017 </p>
           <div className="ml-8">
-            <h3>Sony Corporation</h3>
+            <h3 className="dark:text-white">Sony Corporation</h3>
             Internship <br />
             Development of embedded system
           </div>
         </div>
       </div>
 
-      <div className="text-center mt-20">
-        <h2>Education</h2>
-      </div>
+      <h2 className="text-center mt-20 dark:text-white">Education</h2>
       <div className="mx-4">
         <div>
           <p>Apr 2017 - Mar 2019 </p>
           <div className="ml-8">
-            <h3>Shinshu University</h3>
+            <h3 className="dark:text-white">Shinshu University</h3>
             Japan <br />
             Master of Science and Technology <br />
             Electrical and Computer Engineering Division
@@ -75,7 +71,7 @@ export const Resume: React.VFC = () => {
         <div>
           <p>Apr 2013 - Mar 2017 </p>
           <div className="ml-8">
-            <h3>Shinshu University</h3>
+            <h3 className="dark:text-white">Shinshu University</h3>
             Japan <br />
             Bachelor of Computer Science and Engineering
           </div>
