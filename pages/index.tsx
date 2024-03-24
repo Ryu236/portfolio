@@ -1,118 +1,29 @@
 import React from 'react'
 import Head from 'next/head'
-import Image from 'next/image'
+import { useTheme } from 'next-themes'
 import { Resume } from '../components/resume'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMoon, faSun } from '@fortawesome/free-regular-svg-icons'
 
-{
-  /*
-const Sun = ({fill}) => (
-  <svg
-    version="1.1"
-    id="Capa_1"
-    xmlns="http://www.w3.org/2000/svg"
-    x="0px"
-    y="0px"
-    width="30px"
-    height="30px"
-    viewBox="0 0 45.16 45.16"
-    fill={fill}
-  >
-    <path
-      d="M22.58,11.269c-6.237,0-11.311,5.075-11.311,11.312s5.074,11.312,11.311,11.312c6.236,0,11.311-5.074,11.311-11.312
-S28.816,11.269,22.58,11.269z"
-    />
-    <path
-      d="M22.58,7.944c-1.219,0-2.207-0.988-2.207-2.206V2.207C20.373,0.988,21.361,0,22.58,0c1.219,0,2.207,0.988,2.207,2.207
-v3.531C24.787,6.956,23.798,7.944,22.58,7.944z"
-    />
-    <path
-      d="M22.58,37.215c-1.219,0-2.207,0.988-2.207,2.207v3.53c0,1.22,0.988,2.208,2.207,2.208c1.219,0,2.207-0.988,2.207-2.208
-v-3.53C24.787,38.203,23.798,37.215,22.58,37.215z"
-    />
-    <path
-      d="M32.928,12.231c-0.861-0.862-0.861-2.259,0-3.121l2.497-2.497c0.861-0.861,2.259-0.861,3.121,0
-c0.862,0.862,0.862,2.26,0,3.121l-2.497,2.497C35.188,13.093,33.791,13.093,32.928,12.231z"
-    />
-    <path
-      d="M12.231,32.93c-0.862-0.863-2.259-0.863-3.121,0l-2.497,2.496c-0.861,0.861-0.862,2.26,0,3.121
-c0.862,0.861,2.26,0.861,3.121,0l2.497-2.498C13.093,35.188,13.093,33.79,12.231,32.93z"
-    />
-    <path
-      d="M37.215,22.58c0-1.219,0.988-2.207,2.207-2.207h3.531c1.219,0,2.207,0.988,2.207,2.207c0,1.219-0.988,2.206-2.207,2.206
-h-3.531C38.203,24.786,37.215,23.799,37.215,22.58z"
-    />
-    <path
-      d="M7.944,22.58c0-1.219-0.988-2.207-2.207-2.207h-3.53C0.988,20.373,0,21.361,0,22.58c0,1.219,0.988,2.206,2.207,2.206
-h3.531C6.956,24.786,7.944,23.799,7.944,22.58z"
-    />
-    <path
-      d="M32.928,32.93c0.862-0.861,2.26-0.861,3.121,0l2.497,2.497c0.862,0.86,0.862,2.259,0,3.12s-2.259,0.861-3.121,0
-l-2.497-2.497C32.066,35.188,32.066,33.791,32.928,32.93z"
-    />
-    <path
-      d="M12.231,12.231c0.862-0.862,0.862-2.259,0-3.121L9.734,6.614c-0.862-0.862-2.259-0.862-3.121,0
-c-0.862,0.861-0.862,2.259,0,3.12l2.497,2.497C9.972,13.094,11.369,13.094,12.231,12.231z"
-    />
-  </svg>
-)
+export const Home: React.FC = () => {
+  const { theme, setTheme } = useTheme()
 
-const Moon = ({fill}) => (
-  <svg
-    width="30px"
-    height="30px"
-    viewBox="-12 0 448 448.04455"
-    xmlns="http://www.w3.org/2000/svg"
-    fill={fill}
-  >
-    <path d="m224.023438 448.03125c85.714843.902344 164.011718-48.488281 200.117187-126.230469-22.722656 9.914063-47.332031 14.769531-72.117187 14.230469-97.15625-.109375-175.890626-78.84375-176-176 .972656-65.71875 37.234374-125.832031 94.910156-157.351562-15.554688-1.980469-31.230469-2.867188-46.910156-2.648438-123.714844 0-224.0000005 100.289062-224.0000005 224 0 123.714844 100.2851565 224 224.0000005 224zm0 0" />
-  </svg>
-)
-*/
-}
-
-const Hatena = ({ fill }: { fill: string }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="60px"
-    height="60px"
-    viewBox="0 0 100 100"
-  >
-    <path
-      fill={fill}
-      d="M50.1 100.2C22.5 100.2 0 77.7 0 50.1S22.5 0 50.1 0s50.1 22.5 50.1 50.1c-.1 27.6-22.5 50.1-50.1 50.1zm0-93.8C26 6.4 6.4 26 6.4 50.1S26 93.8 50.1 93.8s43.7-19.6 43.7-43.7S74.2 6.4 50.1 6.4z"
-    />
-    <path
-      fill={fill}
-      d="M55.9 25.3c-2.4-5-3.9-9.8-4.7-12.6v35.5c1.2.5 2.1 1.6 2.1 3 0 1.8-1.5 3.3-3.3 3.3-1.8 0-3.3-1.5-3.3-3.3 0-1.5 1-2.7 2.3-3.1V12.7c-.8 2.8-2.2 7.6-4.7 12.6-3.8 7.8-8.6 14.6-8.6 14.6l3.1 41.8s2.9 3.2 11.3 3.2 11.3-3.2 11.3-3.2l3.1-41.8s-4.8-6.8-8.6-14.6z"
-    />
-  </svg>
-)
-
-export const Home: React.VFC = () => {
-  {
-    /*
-     * let theme: string
-     *
-     * const [dark, useDark] = useState(false)
-     */
-  }
-  const dark = false
-
-  {
-    /*
-     * const SwitchTheme = () => {
-     *   theme = document.documentElement.dataset.theme
-     *   //console.log(theme)
-     *   //console.log(isDarkMode)
-     *   if (theme === 'dark') {
-     *   useDark(false)
-     *   document.documentElement.dataset.theme = 'light'
-     *   } else {
-     *   useDark(true)
-     *     document.documentElement.dataset.theme = 'dark'
-     *   }
-     * }
-     */
+  const ThemeChanger = () => {
+    const changeTheme = () => {
+      setTheme(theme === 'light' ? 'dark' : 'light')
+    }
+    return (
+      <button
+        className="items-center p-2 pb-1 bg-black dark:bg-white rounded-full"
+        onClick={changeTheme}
+      >
+        {theme === 'light' ? (
+          <FontAwesomeIcon className="w-5 h-5" color="white" icon={faMoon} />
+        ) : (
+          <FontAwesomeIcon className="w-5 h-5" color="#ea580c" icon={faSun} />
+        )}
+      </button>
+    )
   }
 
   const GithubIcon = () => (
@@ -121,6 +32,7 @@ export const Home: React.VFC = () => {
       width="60px"
       height="60px"
       viewBox="0 0 120.775 117.794"
+      filter={theme !== 'light' ? 'invert(1)' : ''}
     >
       <g
         id="Group_1"
@@ -198,13 +110,56 @@ export const Home: React.VFC = () => {
       </g>
     </svg>
   )
+  const Hatena = () => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="60px"
+      height="60px"
+      viewBox="0 0 100 100"
+    >
+      <path
+        fill={theme !== 'light' ? '#EEE' : '#333'}
+        d="M50.1 100.2C22.5 100.2 0 77.7 0 50.1S22.5 0 50.1 0s50.1 22.5 50.1 50.1c-.1 27.6-22.5 50.1-50.1 50.1zm0-93.8C26 6.4 6.4 26 6.4 50.1S26 93.8 50.1 93.8s43.7-19.6 43.7-43.7S74.2 6.4 50.1 6.4z"
+      />
+      <path
+        fill={theme !== 'light' ? '#EEE' : '#333'}
+        d="M55.9 25.3c-2.4-5-3.9-9.8-4.7-12.6v35.5c1.2.5 2.1 1.6 2.1 3 0 1.8-1.5 3.3-3.3 3.3-1.8 0-3.3-1.5-3.3-3.3 0-1.5 1-2.7 2.3-3.1V12.7c-.8 2.8-2.2 7.6-4.7 12.6-3.8 7.8-8.6 14.6-8.6 14.6l3.1 41.8s2.9 3.2 11.3 3.2 11.3-3.2 11.3-3.2l3.1-41.8s-4.8-6.8-8.6-14.6z"
+      />
+    </svg>
+  )
+
+  const Wantedly = () => (
+    <svg
+      id="Logo"
+      xmlns="http://www.w3.org/2000/svg"
+      width="85px"
+      height="85px"
+      viewBox="0 0 500 394"
+    >
+      <defs></defs>
+      <circle className="cls-1" fill="#21bddb" cx="375" cy="122.95" r="38.98" />
+      <path
+        className="cls-2"
+        fill={theme !== 'light' ? '#fff' : '#282828'}
+        fillRule="evenodd"
+        d="M217.17,234.77c-2.34-1.52-9-10.45-27.42-54.44-1.15-2.76-2.22-5.14-3.23-7.18l-3.77-9.08L150.47,86.12H85.89l32.29,77.95,32.29,78,29.82,72a2.68,2.68,0,0,0,4.94,0l32.45-77.68A1.34,1.34,0,0,0,217.17,234.77Z"
+      />
+      <path
+        className="cls-2"
+        fill={theme !== 'light' ? '#fff' : '#282828'}
+        fillRule="evenodd"
+        d="M338.15,234.77c-2.34-1.52-9-10.45-27.42-54.44-1.15-2.76-2.23-5.14-3.24-7.19l-3.75-9.07L271.45,86.12H206.87l32.29,77.95,32.29,78,29.82,72a2.68,2.68,0,0,0,4.94,0l32.45-77.67A1.36,1.36,0,0,0,338.15,234.77Z"
+      />
+    </svg>
+  )
 
   return (
-    <div className="flex flex-col mx-auto min-h-screen">
+    <div className="flex flex-col mx-auto min-h-screen dark:text-white dark:bg-black">
       <Head>
         <title>ryu236.com</title>
       </Head>
       <main className="flex flex-col py-16 items-center">
+        <ThemeChanger />
         <h1 className="leading-3 sm:leading-5 text-4xl sm:text-5xl mt-16 sm:mt-16">
           Ryu236
         </h1>
@@ -213,24 +168,6 @@ export const Home: React.VFC = () => {
           Hi, my name is Ryutaro Kobayashi.
           <br />I am a software engineer in Japan.
         </p>
-
-        {/*
-        <div className="switch flex relative mt-5">
-          <Sun fill={dark ? 'gray' : 'orange'} />
-          <input
-            id="toggle"
-            className="toggle-input"
-            type="checkbox"
-            onChange={SwitchTheme}
-            autoComplete="off"
-          />
-          <label
-            htmlFor="toggle"
-            className="toggle-label relative inline-block"
-          />
-          <Moon fill={dark ? '#FCD707' : 'gray'} />
-        </div>
-        */}
 
         <div className="flex flex-row items-center justify-center max-w-4xl mt-16">
           <a
@@ -255,7 +192,7 @@ export const Home: React.VFC = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Hatena fill={dark ? '#EEE' : '#333'} />
+            <Hatena />
           </a>
           <a
             className="sm:mx-3"
@@ -263,12 +200,7 @@ export const Home: React.VFC = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              src="/Wantedly_Mark_LightBG.svg"
-              alt="wantedly"
-              width={80}
-              height={80}
-            />
+            <Wantedly />
           </a>
         </div>
         <Resume />
