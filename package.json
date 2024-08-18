@@ -11,7 +11,7 @@
     "format": "prettier --write .",
     "lint": "eslint . --ext ts --ext tsx --ext js",
     "test": "jest",
-    "test-all": "npm run lint && npm run type-check && npm run test",
+    "test-all": "bun run lint && bun run type-check && bun run test",
     "prepare": "husky install"
   },
   "husky": {
@@ -22,8 +22,8 @@
   },
   "lint-staged": {
     "*.@(ts|tsx)": [
-      "npm run lint",
-      "npm run format"
+      "bun run lint",
+      "bun run format"
     ]
   },
   "dependencies": {
