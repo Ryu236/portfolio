@@ -11,8 +11,8 @@ export const Resume: React.FC = () => {
           <div className="ml-8">
             <h3 className="dark:text-white">UPSIDER, Inc.</h3>
             Backend Engineer <br />
-            Development of the web application and payment card processing
-            system
+            Development of the web application, payment card processing system
+            and fraudulent use prevention
           </div>
         </div>
         <div>
