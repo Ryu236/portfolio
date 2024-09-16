@@ -45,7 +45,7 @@
     "@types/gtag.js": "0.0.20",
     "@types/jest": "29.5.13",
     "@types/node": "^22.1.0",
-    "@types/react": "^18.2.20",
+    "@types/react": "^18.3.6",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.0",
     "autoprefixer": "^10.4.15",
