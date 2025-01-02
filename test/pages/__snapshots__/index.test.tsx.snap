@@ -256,9 +256,11 @@ exports[`Home page matches snapshot 1`] = `
               >
                 UPSIDER, Inc.
               </h3>
-              Backend Engineer 
+              Tech lead & Fullstack Engineer 
               <br />
-              Development of the web application, payment card processing system and fraudulent use prevention
+              Development of the prevention fraudulent use transactions. 
+              <br />
+              Previously developed web applications, payment card processing systems.
             </div>
           </div>
           <div>
@@ -275,7 +277,7 @@ exports[`Home page matches snapshot 1`] = `
               </h3>
               Backend Engineer（side job） 
               <br />
-              Development of the web application
+              Development of the web application.
             </div>
           </div>
           <div>
@@ -292,7 +294,7 @@ exports[`Home page matches snapshot 1`] = `
               </h3>
               Software Engineer 
               <br />
-              Development, maintenance and operation of the payment platform
+              Development, maintenance and operation of the payment platform.
             </div>
           </div>
           <div>
@@ -309,7 +311,7 @@ exports[`Home page matches snapshot 1`] = `
               </h3>
               Backend Engineer（side job） 
               <br />
-              Development of the application
+              Development of the application.
             </div>
           </div>
           <div>
@@ -326,7 +328,7 @@ exports[`Home page matches snapshot 1`] = `
               </h3>
               Internship 
               <br />
-              Development of Android application
+              Development of Android application.
             </div>
           </div>
           <div>
@@ -343,7 +345,7 @@ exports[`Home page matches snapshot 1`] = `
               </h3>
               Internship 
               <br />
-              Development of embedded system
+              Development of embedded system.
             </div>
           </div>
         </div>

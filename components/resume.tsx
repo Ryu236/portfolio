@@ -10,9 +10,9 @@ export const Resume: React.FC = () => {
           <p>Mar 2023 - Present</p>
           <div className="ml-8">
             <h3 className="dark:text-white">UPSIDER, Inc.</h3>
-            Backend Engineer <br />
-            Development of the web application, payment card processing system
-            and fraudulent use prevention
+            Tech lead & Fullstack Engineer <br />
+            Development of the prevention fraudulent use transactions. <br />
+            Previously developed web applications, payment card processing systems.
           </div>
         </div>
         <div>
@@ -20,7 +20,7 @@ export const Resume: React.FC = () => {
           <div className="ml-8">
             <h3 className="dark:text-white">Shiftbase, Inc.</h3>
             Backend Engineer（side job） <br />
-            Development of the web application
+            Development of the web application.
           </div>
         </div>
         <div>
@@ -28,7 +28,7 @@ export const Resume: React.FC = () => {
           <div className="ml-8">
             <h3 className="dark:text-white">DMM.com LLC</h3>
             Software Engineer <br />
-            Development, maintenance and operation of the payment platform
+            Development, maintenance and operation of the payment platform.
           </div>
         </div>
         <div>
@@ -36,7 +36,7 @@ export const Resume: React.FC = () => {
           <div className="ml-8">
             <h3 className="dark:text-white">GANGAN, Inc.</h3>
             Backend Engineer（side job） <br />
-            Development of the application
+            Development of the application.
           </div>
         </div>
         <div>
@@ -44,7 +44,7 @@ export const Resume: React.FC = () => {
           <div className="ml-8">
             <h3 className="dark:text-white">Eureka, Inc.</h3>
             Internship <br />
-            Development of Android application
+            Development of Android application.
           </div>
         </div>
         <div>
@@ -52,7 +52,7 @@ export const Resume: React.FC = () => {
           <div className="ml-8">
             <h3 className="dark:text-white">Sony Corporation</h3>
             Internship <br />
-            Development of embedded system
+            Development of embedded system.
           </div>
         </div>
       </div>
