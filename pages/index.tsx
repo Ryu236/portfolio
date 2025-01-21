@@ -241,7 +241,7 @@ export const Home: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          © 2021 Ryutaro Kobayashi
+          © 2021 Ryu236
         </a>
       </footer>
     </div>
