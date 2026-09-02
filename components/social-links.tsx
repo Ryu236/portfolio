@@ -29,7 +29,7 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({ className }) => {
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="underline decoration-muted underline-offset-[3px] transition-colors hover:text-ink hover:decoration-ink"
+            className="text-ink underline decoration-muted underline-offset-[3px] transition-colors hover:text-ink hover:decoration-ink"
           >
             {link.label}
           </a>
