@@ -24,6 +24,11 @@ export default class MyDocument extends Document {
         suppressHydrationWarning
       >
         <Head>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `(function(){try{if(localStorage.getItem('theme')==='system'){localStorage.setItem('theme','dark')}}catch(e){}})()`,
+            }}
+          />
           <link rel="icon" href="/favicon.ico" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link

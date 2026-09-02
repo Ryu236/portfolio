@@ -144,7 +144,7 @@ export const Work: React.FC = () => {
       <div>
         {jobs.map((job) =>
           job.featured ? (
-            <FeaturedJob key={job.company} job={job} />
+            <FeaturedJob key={`${job.company}-${job.dates}`} job={job} />
           ) : (
             <QuietJob key={`${job.company}-${job.dates}`} job={job} />
           ),
