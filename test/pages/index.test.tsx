@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, screen } from '../testUtils'
+import { fireEvent, render, screen } from '../testUtils'
 import { Home } from '../../pages/index'
 import { socialLinks } from '../../components/social-links'
 
@@ -104,5 +104,16 @@ describe('Home page', () => {
     }
 
     expect(screen.queryByText('Wantedly')).not.toBeInTheDocument()
+  })
+
+  it('toggles the theme from the chrome button', () => {
+    render(<Home />)
+
+    const button = screen.getByRole('button', { name: 'Switch to light theme' })
+    fireEvent.click(button)
+
+    expect(
+      screen.getByRole('button', { name: 'Switch to dark theme' }),
+    ).toBeInTheDocument()
   })
 })

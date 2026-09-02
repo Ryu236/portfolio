@@ -54,25 +54,43 @@ exports[`Home page matches snapshot 1`] = `
             class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--toggle)] text-[var(--toggle-icon)]"
             type="button"
           >
-            <svg
-              aria-hidden="true"
-              class="h-3.5 w-3.5"
-              fill="currentColor"
-              viewBox="0 0 24 24"
+            <span
+              class="hidden dark:inline-flex"
             >
-              <circle
-                cx="12"
-                cy="12"
-                r="4"
-              />
-              <path
-                d="M12 3.5v2M12 18.5v2M3.5 12h2M18.5 12h2M6.05 6.05l1.4 1.4M16.55 16.55l1.4 1.4M6.05 17.95l1.4-1.4M16.55 7.45l1.4-1.4"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-width="1.75"
-              />
-            </svg>
+              <svg
+                aria-hidden="true"
+                class="h-3.5 w-3.5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="4"
+                />
+                <path
+                  d="M12 3.5v2M12 18.5v2M3.5 12h2M18.5 12h2M6.05 6.05l1.4 1.4M16.55 16.55l1.4 1.4M6.05 17.95l1.4-1.4M16.55 7.45l1.4-1.4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-width="1.75"
+                />
+              </svg>
+            </span>
+            <span
+              class="inline-flex dark:hidden"
+            >
+              <svg
+                aria-hidden="true"
+                class="h-3.5 w-3.5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20.2 15.3A8.2 8.2 0 0 1 8.7 3.8 7.1 7.1 0 1 0 20.2 15.3Z"
+                />
+              </svg>
+            </span>
           </button>
         </div>
       </header>
@@ -314,11 +332,15 @@ exports[`Home page matches snapshot 1`] = `
                 >
                   Shiftbase, Inc.
                 </h3>
-                <p
-                  class="text-[11px] font-medium uppercase tracking-[0.14em] text-muted"
+                <div
+                  class="mt-1"
                 >
-                  Backend Engineer (side job)
-                </p>
+                  <p
+                    class="text-[11px] font-medium uppercase tracking-[0.14em] text-muted"
+                  >
+                    Backend Engineer (side job)
+                  </p>
+                </div>
                 <p
                   class="mt-1.5 text-[15px] leading-relaxed text-ink"
                 >
@@ -340,11 +362,15 @@ exports[`Home page matches snapshot 1`] = `
                 >
                   DMM.com LLC
                 </h3>
-                <p
-                  class="text-[11px] font-medium uppercase tracking-[0.14em] text-muted"
+                <div
+                  class="mt-1"
                 >
-                  Software Engineer
-                </p>
+                  <p
+                    class="text-[11px] font-medium uppercase tracking-[0.14em] text-muted"
+                  >
+                    Software Engineer
+                  </p>
+                </div>
                 <p
                   class="mt-1.5 text-[15px] leading-relaxed text-ink"
                 >
@@ -366,11 +392,15 @@ exports[`Home page matches snapshot 1`] = `
                 >
                   GANGAN, Inc.
                 </h3>
-                <p
-                  class="text-[11px] font-medium uppercase tracking-[0.14em] text-muted"
+                <div
+                  class="mt-1"
                 >
-                  Backend Engineer (side job)
-                </p>
+                  <p
+                    class="text-[11px] font-medium uppercase tracking-[0.14em] text-muted"
+                  >
+                    Backend Engineer (side job)
+                  </p>
+                </div>
                 <p
                   class="mt-1.5 text-[15px] leading-relaxed text-ink"
                 >
@@ -392,11 +422,15 @@ exports[`Home page matches snapshot 1`] = `
                 >
                   Eureka, Inc.
                 </h3>
-                <p
-                  class="text-[11px] font-medium uppercase tracking-[0.14em] text-muted"
+                <div
+                  class="mt-1"
                 >
-                  Internship
-                </p>
+                  <p
+                    class="text-[11px] font-medium uppercase tracking-[0.14em] text-muted"
+                  >
+                    Internship
+                  </p>
+                </div>
                 <p
                   class="mt-1.5 text-[15px] leading-relaxed text-ink"
                 >
@@ -418,11 +452,15 @@ exports[`Home page matches snapshot 1`] = `
                 >
                   Sony Corporation
                 </h3>
-                <p
-                  class="text-[11px] font-medium uppercase tracking-[0.14em] text-muted"
+                <div
+                  class="mt-1"
                 >
-                  Internship
-                </p>
+                  <p
+                    class="text-[11px] font-medium uppercase tracking-[0.14em] text-muted"
+                  >
+                    Internship
+                  </p>
+                </div>
                 <p
                   class="mt-1.5 text-[15px] leading-relaxed text-ink"
                 >

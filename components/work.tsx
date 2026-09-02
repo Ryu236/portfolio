@@ -121,7 +121,11 @@ const QuietJob: React.FC<{ job: Job }> = ({ job }) => (
       <h3 className="font-serif text-[1.375rem] font-medium leading-tight text-ink">
         {job.company}
       </h3>
-      {job.title && <RoleTitle>{job.title}</RoleTitle>}
+      {job.title && (
+        <div className="mt-1">
+          <RoleTitle>{job.title}</RoleTitle>
+        </div>
+      )}
       {job.description && (
         <p className="mt-1.5 text-[15px] leading-relaxed text-ink">
           {job.description}

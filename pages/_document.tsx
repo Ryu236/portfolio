@@ -19,6 +19,7 @@ export default class MyDocument extends Document {
     return (
       <Html
         lang="en"
+        className="dark"
         prefix="og: https://ogp.me/ns/profile#"
         suppressHydrationWarning
       >

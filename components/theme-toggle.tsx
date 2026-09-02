@@ -38,18 +38,21 @@ export const ThemeToggle: React.FC = () => {
     setMounted(true)
   }, [])
 
-  const isDark = theme !== 'light'
-  const nextTheme = isDark ? 'light' : 'dark'
-  const label = isDark ? 'Switch to light theme' : 'Switch to dark theme'
+  const isLight = mounted && theme === 'light'
 
   return (
     <button
       type="button"
-      aria-label={mounted ? label : 'Toggle theme'}
-      onClick={() => setTheme(nextTheme)}
+      aria-label={isLight ? 'Switch to dark theme' : 'Switch to light theme'}
+      onClick={() => setTheme(isLight ? 'dark' : 'light')}
       className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--toggle)] text-[var(--toggle-icon)]"
     >
-      {isDark ? <SunIcon /> : <MoonIcon />}
+      <span className="hidden dark:inline-flex">
+        <SunIcon />
+      </span>
+      <span className="inline-flex dark:hidden">
+        <MoonIcon />
+      </span>
     </button>
   )
 }
