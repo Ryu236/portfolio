@@ -10,7 +10,12 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <GoogleAnalytics />
-      <ThemeProvider attribute="class">
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="dark"
+        enableSystem={false}
+        storageKey="theme"
+      >
         <Component {...pageProps} />
       </ThemeProvider>
       <Analytics />

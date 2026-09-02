@@ -17,9 +17,23 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="en" prefix="og: https://ogp.me/ns/profile#">
+      <Html
+        lang="en"
+        prefix="og: https://ogp.me/ns/profile#"
+        suppressHydrationWarning
+      >
         <Head>
           <link rel="icon" href="/favicon.ico" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="anonymous"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500&display=swap"
+            rel="stylesheet"
+          />
           <meta property="og:title" content="ryu236.com" />
           <meta property="og:type" content="profile" />
           <meta property="og:url" content="https://www.ryu236.com/" />
