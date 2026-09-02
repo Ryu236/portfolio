@@ -2,7 +2,7 @@ import React from 'react'
 
 export const socialLinks = [
   { href: 'https://github.com/Ryu236/', label: 'GitHub' },
-  { href: 'https://twitter.com/Ryuk236', label: 'X' },
+  { href: 'https://x.com/Ryuk236', label: 'X' },
   { href: 'https://blog.ryu236.com', label: 'Blog' },
   { href: 'https://www.linkedin.com/in/ryu236/', label: 'LinkedIn' },
 ] as const

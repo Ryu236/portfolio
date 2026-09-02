@@ -41,7 +41,9 @@ export default class MyDocument extends Document {
           <meta property="og:title" content="ryu236.com" />
           <meta property="og:type" content="profile" />
           <meta property="og:url" content="https://www.ryu236.com/" />
-          <meta property="og:image" content="/icon.png" />
+          <meta property="og:image" content="https://www.ryu236.com/og.png" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:image" content="https://www.ryu236.com/og.png" />
           <meta property="profile:username" content="Ryu236" />
         </Head>
         <body>
