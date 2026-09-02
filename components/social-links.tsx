@@ -14,14 +14,14 @@ type SocialLinksProps = {
 export const SocialLinks: React.FC<SocialLinksProps> = ({ className }) => {
   return (
     <ul
-      className={`flex flex-wrap items-center text-[15px] leading-relaxed text-muted ${
+      className={`flex flex-wrap items-center text-[15px] leading-relaxed text-ink ${
         className ?? ''
       }`}
     >
       {socialLinks.map((link, index) => (
         <li key={link.href} className="flex items-center">
           {index > 0 && (
-            <span aria-hidden="true" className="px-2">
+            <span aria-hidden="true" className="px-2 text-muted">
               ·
             </span>
           )}
