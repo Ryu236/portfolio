@@ -82,19 +82,24 @@ if [[ "$READY" != "1" ]]; then
   verify_die "timed out waiting for Ready on $URL. Log: $LOG"
 fi
 
-cat >"$RUN_DIR/env" <<EOF
-PORTFOLIO_VERIFY_RUN_ID=$RUN_ID
-PORTFOLIO_VERIFY_RUN_DIR=$RUN_DIR
-PORTFOLIO_VERIFY_EVIDENCE_DIR=$EVIDENCE_DIR
-PORTFOLIO_VERIFY_PORT=$PORT
-PORTFOLIO_VERIFY_URL=$URL
-PORTFOLIO_VERIFY_PID=$PID
-PORTFOLIO_VERIFY_LOG=$LOG
-PORTFOLIO_VERIFY_REPO=$REPO
-PORTFOLIO_VERIFY_CHROME_PROFILE=$RUN_DIR/chrome-profile
-PORTFOLIO_VERIFY_CHROME_BIN=$(verify_chrome_bin)
-EOF
+write_instance_env() {
+  local dest="$1"
+  local chrome_bin="$2"
+  {
+    printf 'PORTFOLIO_VERIFY_RUN_ID=%q\n' "$RUN_ID"
+    printf 'PORTFOLIO_VERIFY_RUN_DIR=%q\n' "$RUN_DIR"
+    printf 'PORTFOLIO_VERIFY_EVIDENCE_DIR=%q\n' "$EVIDENCE_DIR"
+    printf 'PORTFOLIO_VERIFY_PORT=%q\n' "$PORT"
+    printf 'PORTFOLIO_VERIFY_URL=%q\n' "$URL"
+    printf 'PORTFOLIO_VERIFY_PID=%q\n' "$PID"
+    printf 'PORTFOLIO_VERIFY_LOG=%q\n' "$LOG"
+    printf 'PORTFOLIO_VERIFY_REPO=%q\n' "$REPO"
+    printf 'PORTFOLIO_VERIFY_CHROME_PROFILE=%q\n' "$RUN_DIR/chrome-profile"
+    printf 'PORTFOLIO_VERIFY_CHROME_BIN=%q\n' "$chrome_bin"
+  } >"$dest"
+}
 
+write_instance_env "$RUN_DIR/env" "$(verify_chrome_bin)"
 cp "$RUN_DIR/env" "$LOCK"
 ln -sfn "$RUN_DIR" "$RUN_ROOT/latest"
 

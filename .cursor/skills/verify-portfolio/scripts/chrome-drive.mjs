@@ -308,6 +308,40 @@ async function axDump(cdp, outPath) {
   writeFileSync(outPath, lines.join('\n') + '\n')
 }
 
+function hasExited(child) {
+  return child.exitCode != null || child.signalCode != null
+}
+
+function tryKill(child, signal) {
+  try {
+    if (child.pid && !hasExited(child)) child.kill(signal)
+  } catch {
+    // already gone
+  }
+}
+
+function waitForExit(child, timeoutMs) {
+  if (hasExited(child)) return Promise.resolve()
+  return new Promise((resolve) => {
+    const finish = () => {
+      clearTimeout(timer)
+      resolve()
+    }
+    const timer = setTimeout(finish, timeoutMs)
+    child.once('exit', finish)
+  })
+}
+
+async function stopChild(child) {
+  if (!child.pid || hasExited(child)) return
+  tryKill(child, 'SIGTERM')
+  await waitForExit(child, 500)
+  if (!hasExited(child)) {
+    tryKill(child, 'SIGKILL')
+    await waitForExit(child, 1000)
+  }
+}
+
 async function withPage(url, fn) {
   const chromeBin = process.env.PORTFOLIO_VERIFY_CHROME_BIN
   const profile = process.env.PORTFOLIO_VERIFY_CHROME_PROFILE
@@ -354,11 +388,7 @@ async function withPage(url, fn) {
     try {
       if (ws && ws.readyState === WebSocket.OPEN) ws.close()
     } catch {}
-    if (chrome.pid && !chrome.killed) {
-      chrome.kill('SIGTERM')
-      await sleep(300)
-      if (!chrome.killed) chrome.kill('SIGKILL')
-    }
+    await stopChild(chrome)
     if (stderr.includes('Failed to listen') || stderr.includes('already in use')) {
       console.error(stderr)
     }
