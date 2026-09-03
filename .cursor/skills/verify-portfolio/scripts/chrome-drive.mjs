@@ -51,6 +51,7 @@ class Cdp {
     this.ws = ws
     this.n = 0
     this.pending = new Map()
+    this.handlers = new Map()
     ws.addEventListener('message', (ev) => {
       const msg = JSON.parse(String(ev.data))
       if (msg.id != null && this.pending.has(msg.id)) {
@@ -58,7 +59,32 @@ class Cdp {
         this.pending.delete(msg.id)
         if (msg.error) reject(new Error(`${msg.error.message || JSON.stringify(msg.error)}`))
         else resolve(msg.result)
+        return
       }
+      if (msg.method && this.handlers.has(msg.method)) {
+        for (const h of this.handlers.get(msg.method)) h(msg.params)
+      }
+    })
+  }
+
+  on(method, fn) {
+    const list = this.handlers.get(method) || []
+    list.push(fn)
+    this.handlers.set(method, list)
+  }
+
+  off(method, fn) {
+    const list = (this.handlers.get(method) || []).filter((h) => h !== fn)
+    this.handlers.set(method, list)
+  }
+
+  waitEvent(method) {
+    return new Promise((resolve) => {
+      const fn = (params) => {
+        this.off(method, fn)
+        resolve(params)
+      }
+      this.on(method, fn)
     })
   }
 
@@ -143,6 +169,23 @@ function flattenAx(node, lines, depth = 0) {
   for (const child of node.children || []) flattenAx(child, lines, depth + 1)
 }
 
+function flattenAxNodes(nodes) {
+  const lines = []
+  if (!nodes || !nodes.length) return lines
+  if (nodes[0].children) {
+    flattenAx(nodes[0], lines, 0)
+    return lines
+  }
+  const byId = new Map(nodes.map((n) => [n.nodeId, n]))
+  const walk = (node, depth) => {
+    if (!node) return
+    flattenAx({ ...node, children: [] }, lines, depth)
+    for (const id of node.childIds || []) walk(byId.get(id), depth + 1)
+  }
+  walk(nodes[0], 0)
+  return lines
+}
+
 const FIND_EL = `(role, name) => {
   const norm = (s) => (s || '').replace(/\\s+/g, ' ').trim()
   if (role === 'button') {
@@ -170,25 +213,45 @@ async function evalJson(cdp, expression) {
     awaitPromise: true,
   })
   if (result.exceptionDetails) {
-    throw new Error(result.exceptionDetails.text || 'Runtime.evaluate failed')
+    const text =
+      result.exceptionDetails.exception?.description ||
+      result.exceptionDetails.text ||
+      'Runtime.evaluate failed'
+    throw new Error(text)
   }
   return result.result?.value
 }
 
-async function waitHydrated(cdp) {
-  await evalJson(
-    cdp,
-    `(async () => {
-      const deadline = Date.now() + 10000
-      while (Date.now() < deadline) {
-        const h1 = document.querySelector('h1')
-        const shown = document.body && getComputedStyle(document.body).display !== 'none'
-        if (h1 && shown && h1.textContent.includes('Ryutaro Kobayashi')) return true
-        await new Promise((r) => setTimeout(r, 50))
-      }
-      throw new Error('page did not hydrate (missing h1 Ryutaro Kobayashi or body still hidden)')
-    })()`,
+function isContextGone(err) {
+  const msg = err instanceof Error ? err.message : String(err)
+  return /Execution context was destroyed|Cannot find context|session closed|Inspected target navigated/i.test(
+    msg,
   )
+}
+
+async function waitHydrated(cdp) {
+  const deadline = Date.now() + 15000
+  let last = new Error('page did not hydrate')
+  while (Date.now() < deadline) {
+    try {
+      const ok = await evalJson(
+        cdp,
+        `(() => {
+          const h1 = document.querySelector('h1')
+          const shown = document.body && getComputedStyle(document.body).display !== 'none'
+          return !!(h1 && shown && h1.textContent.includes('Ryutaro Kobayashi'))
+        })()`,
+      )
+      if (ok) return
+    } catch (err) {
+      last = err instanceof Error ? err : new Error(String(err))
+      if (!isContextGone(last) && !/Cannot find context/i.test(last.message)) {
+        // keep retrying during navigation; other errors also retry until deadline
+      }
+    }
+    await sleep(100)
+  }
+  throw last
 }
 
 async function pageState(cdp) {
@@ -230,11 +293,9 @@ async function screenshot(cdp, outPath) {
 async function axDump(cdp, outPath) {
   await cdp.send('Accessibility.enable')
   const tree = await cdp.send('Accessibility.getFullAXTree')
-  const lines = []
   const nodes = tree.nodes || []
-  const root = nodes[0]
-  if (root) flattenAx(root, lines, 0)
-  else lines.push(JSON.stringify(tree).slice(0, 4000))
+  const lines = flattenAxNodes(nodes)
+  if (!lines.length) lines.push(JSON.stringify(tree).slice(0, 4000))
   mkdirSync(dirname(outPath), { recursive: true })
   writeFileSync(outPath, lines.join('\n') + '\n')
 }
@@ -259,7 +320,7 @@ async function withPage(url, fn) {
       '--no-first-run',
       '--no-default-browser-check',
       '--window-size=1280,1600',
-      url,
+      'about:blank',
     ],
     { stdio: ['ignore', 'ignore', 'pipe'] },
   )
@@ -276,6 +337,9 @@ async function withPage(url, fn) {
     const cdp = new Cdp(ws)
     await cdp.send('Page.enable')
     await cdp.send('Runtime.enable')
+    const loaded = cdp.waitEvent('Page.loadEventFired')
+    await cdp.send('Page.navigate', { url })
+    await Promise.race([loaded, sleep(10000)])
     await waitHydrated(cdp)
     return await fn(cdp)
   } finally {
@@ -337,9 +401,13 @@ async function main() {
       const before = await pageState(cdp)
       const clicked = await evalJson(
         cdp,
-        `(${FIND_EL})(${JSON.stringify(role)}, ${JSON.stringify(name)})
-          ? ((el) => { el.click(); return { ok: true, tag: el.tagName, href: el.getAttribute && el.getAttribute('href') } })((${FIND_EL})(${JSON.stringify(role)}, ${JSON.stringify(name)}))
-          : { ok: false }`,
+        `(() => {
+          const find = ${FIND_EL}
+          const el = find(${JSON.stringify(role)}, ${JSON.stringify(name)})
+          if (!el) return { ok: false }
+          el.click()
+          return { ok: true, tag: el.tagName, href: el.getAttribute && el.getAttribute('href') }
+        })()`,
       )
       if (!clicked || !clicked.ok) {
         throw new Error(`no ${role} named ${JSON.stringify(name)}`)

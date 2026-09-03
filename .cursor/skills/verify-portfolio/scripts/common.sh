@@ -50,7 +50,66 @@ verify_chrome_bin() {
 
 verify_listen_pids() {
   local port="$1"
-  lsof -nP -t -iTCP:"$port" -sTCP:LISTEN 2>/dev/null | sort -u
+  local pids
+  pids="$(lsof -nP -t -iTCP:"$port" -sTCP:LISTEN 2>/dev/null | sort -u || true)"
+  if [[ -n "$pids" ]]; then
+    printf '%s\n' "$pids"
+    return 0
+  fi
+  # Some environments hide sockets from lsof; netstat still sees next-server.
+  if command -v netstat >/dev/null 2>&1; then
+    pids="$(netstat -tlnp 2>/dev/null | awk -v port="$port" '
+      $6 == "LISTEN" {
+        n = split($4, a, ":")
+        if (a[n] == port) {
+          split($7, b, "/")
+          if (b[1] ~ /^[0-9]+$/) print b[1]
+        }
+      }
+    ' | sort -u)"
+    if [[ -n "$pids" ]]; then
+      printf '%s\n' "$pids"
+      return 0
+    fi
+  fi
+  python3 - "$port" <<'PY'
+import glob
+import os
+import sys
+
+port = int(sys.argv[1])
+
+def inodes(path):
+    found = []
+    try:
+        lines = open(path).read().splitlines()[1:]
+    except FileNotFoundError:
+        return found
+    for line in lines:
+        parts = line.split()
+        local, state, inode = parts[1], parts[3], parts[9]
+        if state != "0A":
+            continue
+        p = int(local.rsplit(":", 1)[1], 16)
+        if p == port:
+            found.append(inode)
+    return found
+
+want = set(inodes("/proc/net/tcp") + inodes("/proc/net/tcp6"))
+pids = set()
+for fd in glob.glob("/proc/[0-9]*/fd/[0-9]*"):
+    try:
+        target = os.readlink(fd)
+    except OSError:
+        continue
+    if not target.startswith("socket:[") or not target.endswith("]"):
+        continue
+    inode = target[len("socket:[") : -1]
+    if inode in want:
+        pids.add(fd.split("/")[2])
+for pid in sorted(pids, key=int):
+    print(pid)
+PY
 }
 
 verify_pid_alive() {
