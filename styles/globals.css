@@ -2,12 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg: #0c0b0a;
+  --ink: #f4f0ea;
+  --muted: #9a9388;
+  --rule: #2a2622;
+  --accent: #e85d04;
+  --toggle: #f4f0ea;
+  --toggle-icon: #0c0b0a;
+}
+
+html.light {
+  --bg: #f4f0ea;
+  --ink: #1a1814;
+  --muted: #6b655c;
+  --rule: #d9d2c8;
+  --accent: #e85d04;
+  --toggle: #1a1814;
+  --toggle-icon: #f4f0ea;
+}
+
 @layer base {
-  html,
+  html {
+    @apply antialiased;
+    background-color: var(--bg);
+    color: var(--ink);
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    html *,
+    html *::before,
+    html *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
   body {
     @apply m-0 p-0 font-sans;
+    background-color: var(--bg);
+    color: var(--ink);
   }
+
   * {
     @apply box-border;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
   }
 }
