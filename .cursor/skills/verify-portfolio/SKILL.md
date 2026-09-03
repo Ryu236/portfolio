@@ -143,6 +143,8 @@ Never kill by process name (`pkill next`, `killall chrome`, `pkill node`).
 
 Run cleanup after every **failed** iteration as well, so port 4370 and `.next` are not stranded.
 
+Cleanup does not unset `PORTFOLIO_VERIFY_*` in your current shell. `launch.sh` ignores those variables when the recorded pid is already dead so a relaunch gets a new run id.
+
 ## Helpers
 
 All under `.cursor/skills/verify-portfolio/scripts/`. They are executable. Source instance env before doctor/drive/cleanup (launch prints the `source …/env` line).

@@ -34,5 +34,6 @@ Preconditions:
 
 - Dev SSR HTML includes `body{display:none}` until JS runs. `dump-home.sh` proving landmarks is not visual proof; always take the hydrated snapshot.
 - Next.js may draw an `N` overlay on `next dev`. Ignore it; it is not product chrome.
+- Primary nav labels are CSS `uppercase`. Chrome AX dumps may show `WORK` / `CONTACT`; `browser.sh click` still uses DOM text `Work` / `Contact`.
 - Title in HTML is `<title data-next-head="">Ryutaro Kobayashi</title>`, not a bare `<title>Ryutaro Kobayashi</title>`.
 - Do not treat Jest snapshots as this feature’s proof.

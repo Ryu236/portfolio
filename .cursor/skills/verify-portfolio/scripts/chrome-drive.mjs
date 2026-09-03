@@ -148,10 +148,18 @@ async function pageWsUrl(port, targetUrl) {
   throw new Error(`no page target for ${targetUrl}`)
 }
 
+function axText(value) {
+  if (value == null) return ''
+  if (typeof value === 'string') return value
+  if (typeof value === 'number') return String(value)
+  if (typeof value === 'object' && typeof value.value === 'string') return value.value
+  return ''
+}
+
 function flattenAx(node, lines, depth = 0) {
   if (!node) return
-  const role = node.role?.value || node.role || ''
-  const name = node.name?.value || node.name || ''
+  const role = axText(node.role)
+  const name = axText(node.name)
   const interesting = [
     'RootWebArea',
     'heading',

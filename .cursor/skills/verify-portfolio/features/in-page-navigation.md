@@ -35,6 +35,7 @@ Preconditions:
 ## Gotchas
 
 - Pathname stays `/`. Assert `location.hash`, not a new route.
+- CSS `uppercase` on Primary nav can make `ax.txt` say `WORK` / `CONTACT`. Click `--name "Work"` and `--name "Contact"` (DOM text), not the AX capitalisation.
 - `browser.sh click` starts at `/` unless `--url` is passed. To prove Contact after Work in one session, use `--url "$PORTFOLIO_VERIFY_URL/#work"` then click `Contact`, or run separate click commands (each command is a fresh Chrome on the shared profile; hash from a previous command does not carry unless you pass `--url`).
 - Smooth scrolling is on unless the visitor asked for reduced motion. Wait for `hash` and the target heading, not a fixed sleep alone (`click` already waits briefly after the click).
 - `#education` exists but has no header link. Do not report Education as covered by Primary nav.

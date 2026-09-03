@@ -3,6 +3,14 @@ set -euo pipefail
 # shellcheck disable=SC1091
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/common.sh"
 
+# A previous cleanup in this shell leaves PORTFOLIO_VERIFY_* exported. Do not
+# reuse that run id or pid if the process is already gone.
+if [[ -n "${PORTFOLIO_VERIFY_PID:-}" ]] && ! verify_pid_alive "$PORTFOLIO_VERIFY_PID"; then
+  unset PORTFOLIO_VERIFY_RUN_ID PORTFOLIO_VERIFY_RUN_DIR PORTFOLIO_VERIFY_EVIDENCE_DIR
+  unset PORTFOLIO_VERIFY_PID PORTFOLIO_VERIFY_URL PORTFOLIO_VERIFY_PORT
+  unset PORTFOLIO_VERIFY_LOG PORTFOLIO_VERIFY_CHROME_PROFILE PORTFOLIO_VERIFY_REPO
+fi
+
 REPO="$(verify_repo_root)"
 PORT="$(verify_default_port)"
 RUN_ROOT="$(verify_run_root)"
