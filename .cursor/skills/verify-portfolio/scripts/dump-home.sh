@@ -15,6 +15,10 @@ LAND="$OUT_DIR/landmarks.txt"
 code="$(curl -sS -D "$HDR" -o "$HTML" -w '%{http_code}' --max-time 10 "${PORTFOLIO_VERIFY_URL}/")"
 [[ "$code" == "200" ]] || verify_die "GET ${PORTFOLIO_VERIFY_URL}/ returned HTTP $code"
 
+if ! command -v python3 >/dev/null 2>&1; then
+  verify_die "dump-home requires python3 on PATH"
+fi
+
 python3 - "$HTML" "$LAND" <<'PY'
 import re
 import sys

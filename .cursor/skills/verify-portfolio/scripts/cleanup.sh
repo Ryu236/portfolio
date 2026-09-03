@@ -24,28 +24,56 @@ EVIDENCE_DIR="${PORTFOLIO_VERIFY_EVIDENCE_DIR:-}"
 PID="${PORTFOLIO_VERIFY_PID:-}"
 RUN_DIR="${PORTFOLIO_VERIFY_RUN_DIR}"
 
-kill_tree() {
+collect_tree() {
   local root="$1"
   verify_pid_alive "$root" || return 0
-  local children
-  children="$(ps -o pid= --ppid "$root" 2>/dev/null | tr -d ' ' || true)"
-  local child
+  local children child
+  children="$(ps -o pid= --ppid "$root" 2>/dev/null | awk '{print $1}' || true)"
   for child in $children; do
-    kill_tree "$child"
+    collect_tree "$child"
   done
-  kill "$root" 2>/dev/null || true
+  printf '%s\n' "$root"
+}
+
+kill_tree() {
+  local root="$1"
+  local pids p any
+  pids="$(collect_tree "$root" | sort -u)"
+  [[ -n "$pids" ]] || return 0
+  for p in $pids; do
+    kill "$p" 2>/dev/null || true
+  done
+  for _ in $(seq 1 20); do
+    any=0
+    for p in $pids; do
+      if verify_pid_alive "$p"; then
+        any=1
+        break
+      fi
+    done
+    [[ "$any" == "0" ]] && return 0
+    sleep 0.2
+  done
+  for p in $pids; do
+    if verify_pid_alive "$p"; then
+      kill -9 "$p" 2>/dev/null || true
+    fi
+  done
+  for _ in $(seq 1 10); do
+    any=0
+    for p in $pids; do
+      if verify_pid_alive "$p"; then
+        any=1
+        break
+      fi
+    done
+    [[ "$any" == "0" ]] && return 0
+    sleep 0.1
+  done
 }
 
 if [[ -n "$PID" ]]; then
   kill_tree "$PID"
-  for _ in $(seq 1 20); do
-    verify_pid_alive "$PID" || break
-    sleep 0.2
-  done
-  if verify_pid_alive "$PID"; then
-    kill -9 "$PID" 2>/dev/null || true
-    sleep 0.2
-  fi
   if verify_pid_alive "$PID"; then
     printf 'verify-portfolio cleanup: pid %s still alive after SIGKILL\n' "$PID" >&2
     exit 1
@@ -53,7 +81,8 @@ if [[ -n "$PID" ]]; then
 fi
 
 LOCK="$(verify_lock_path)"
-if [[ -f "$LOCK" ]] && grep -Fq "PORTFOLIO_VERIFY_RUN_DIR=$RUN_DIR" "$LOCK"; then
+quoted_run_dir="$(printf '%q' "$RUN_DIR")"
+if [[ -f "$LOCK" ]] && grep -Fq "PORTFOLIO_VERIFY_RUN_DIR=$quoted_run_dir" "$LOCK"; then
   rm -f "$LOCK"
 fi
 

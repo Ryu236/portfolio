@@ -24,6 +24,12 @@ LOG="$RUN_DIR/next.log"
 PID_FILE="$RUN_DIR/pid"
 
 if [[ -f "$LOCK" ]]; then
+  if [[ -L "$LOCK" ]]; then
+    verify_die "refusing to source lock $LOCK: it is a symlink"
+  fi
+  if [[ ! -O "$LOCK" ]]; then
+    verify_die "refusing to source lock $LOCK: not owned by $(id -un) (uid ${EUID}). Remove that file if it is leftover, or set PORTFOLIO_VERIFY_RUN_ROOT to a directory you own."
+  fi
   # shellcheck disable=SC1090
   source "$LOCK"
   if verify_pid_alive "${PORTFOLIO_VERIFY_PID:-}"; then
