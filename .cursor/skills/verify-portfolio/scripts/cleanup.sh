@@ -53,7 +53,7 @@ if [[ -n "$PID" ]]; then
 fi
 
 LOCK="$(verify_lock_path)"
-if [[ -f "$LOCK" ]] && grep -q "PORTFOLIO_VERIFY_RUN_DIR=$RUN_DIR" "$LOCK"; then
+if [[ -f "$LOCK" ]] && grep -Fq "PORTFOLIO_VERIFY_RUN_DIR=$RUN_DIR" "$LOCK"; then
   rm -f "$LOCK"
 fi
 

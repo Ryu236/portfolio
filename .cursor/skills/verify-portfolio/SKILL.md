@@ -41,6 +41,7 @@ What it does:
 1. Installs deps if `node_modules/.bin/next` is missing (`bun install` if bun exists, otherwise `HUSKY=0 npm ci`).
 2. Starts `next dev --hostname 127.0.0.1 --port $PORT` with `NEXT_TELEMETRY_DISABLED=1`.
 3. Waits until the log contains `Ready` **and** `GET http://127.0.0.1:$PORT/` returns 200.
+4. Records Chrome if found; if not, prints a warning and still finishes. `doctor.sh` and `dump-home.sh` do not need Chrome. `browser.sh` fails until a binary is present.
 
 Ready signals (observed on Next 15.3.3 in this repo):
 

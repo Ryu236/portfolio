@@ -99,7 +99,11 @@ write_instance_env() {
   } >"$dest"
 }
 
-write_instance_env "$RUN_DIR/env" "$(verify_chrome_bin)"
+CHROME_BIN="$(verify_find_chrome || true)"
+if [[ -z "$CHROME_BIN" ]]; then
+  printf 'verify-portfolio: warning: no Chrome/Chromium found; doctor and dump-home still work; browser.sh requires Chrome\n' >&2
+fi
+write_instance_env "$RUN_DIR/env" "$CHROME_BIN"
 cp "$RUN_DIR/env" "$LOCK"
 ln -sfn "$RUN_DIR" "$RUN_ROOT/latest"
 

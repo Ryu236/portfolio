@@ -33,7 +33,7 @@ verify_die() {
   exit 1
 }
 
-verify_chrome_bin() {
+verify_find_chrome() {
   if [[ -n "${PORTFOLIO_VERIFY_CHROME_BIN:-}" && -x "${PORTFOLIO_VERIFY_CHROME_BIN}" ]]; then
     printf '%s\n' "$PORTFOLIO_VERIFY_CHROME_BIN"
     return 0
@@ -45,7 +45,16 @@ verify_chrome_bin() {
       return 0
     fi
   done
-  verify_die "no Chrome/Chromium binary found (looked for /opt/google/chrome/google-chrome and google-chrome-stable). Do not use PATH google-chrome if it wraps a shared --user-data-dir."
+  return 1
+}
+
+verify_chrome_bin() {
+  local bin
+  bin="$(verify_find_chrome || true)"
+  if [[ -z "$bin" ]]; then
+    verify_die "no Chrome/Chromium binary found (looked for /opt/google/chrome/google-chrome and google-chrome-stable). Do not use PATH google-chrome if it wraps a shared --user-data-dir."
+  fi
+  printf '%s\n' "$bin"
 }
 
 verify_listen_pids() {

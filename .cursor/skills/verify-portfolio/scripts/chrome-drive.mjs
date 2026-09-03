@@ -30,6 +30,14 @@ function die(msg) {
   process.exit(1)
 }
 
+function requireWebSocket() {
+  const WS = globalThis.WebSocket
+  if (typeof WS === 'function') return WS
+  die(
+    `globalThis.WebSocket is undefined (Node ${process.version}). Need Node 22+, Node 21 with --experimental-websocket, or assign a WebSocket implementation to globalThis.WebSocket (for example the \`ws\` package) before running chrome-drive.`,
+  )
+}
+
 function freePort() {
   return new Promise((res, rej) => {
     const s = createServer()
@@ -111,7 +119,7 @@ class Cdp {
 }
 
 async function waitOpen(ws) {
-  if (ws.readyState === WebSocket.OPEN) return
+  if (ws.readyState === 1) return
   await new Promise((resolve, reject) => {
     ws.addEventListener('open', resolve, { once: true })
     ws.addEventListener('error', () => reject(new Error('websocket error')), { once: true })
@@ -343,6 +351,7 @@ async function stopChild(child) {
 }
 
 async function withPage(url, fn) {
+  const WebSocketImpl = requireWebSocket()
   const chromeBin = process.env.PORTFOLIO_VERIFY_CHROME_BIN
   const profile = process.env.PORTFOLIO_VERIFY_CHROME_PROFILE
   if (!chromeBin) die('PORTFOLIO_VERIFY_CHROME_BIN is unset')
@@ -374,7 +383,7 @@ async function withPage(url, fn) {
   try {
     await waitCdp(debugPort)
     const pageUrl = await pageWsUrl(debugPort, url)
-    ws = new WebSocket(pageUrl)
+    ws = new WebSocketImpl(pageUrl)
     await waitOpen(ws)
     const cdp = new Cdp(ws)
     await cdp.send('Page.enable')
@@ -386,7 +395,7 @@ async function withPage(url, fn) {
     return await fn(cdp)
   } finally {
     try {
-      if (ws && ws.readyState === WebSocket.OPEN) ws.close()
+      if (ws && ws.readyState === 1) ws.close()
     } catch {}
     await stopChild(chrome)
     if (stderr.includes('Failed to listen') || stderr.includes('already in use')) {

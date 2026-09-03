@@ -54,7 +54,7 @@ else
   note "GET / -> 200"
 fi
 
-if ! grep -q 'X-Powered-By: Next.js' "$tmp_hdr"; then
+if ! grep -qi '^x-powered-by:[[:space:]]*Next\.js' "$tmp_hdr"; then
   bad "response is missing X-Powered-By: Next.js"
 fi
 
