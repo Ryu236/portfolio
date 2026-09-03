@@ -13,3 +13,7 @@ Object.defineProperty(window, 'matchMedia', {
     dispatchEvent: jest.fn(),
   })),
 })
+
+afterEach(() => {
+  window.localStorage.removeItem('theme')
+})

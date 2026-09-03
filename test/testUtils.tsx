@@ -15,8 +15,10 @@ const Providers = ({ children }: PropsWithChildren) => {
   )
 }
 
-const customRender = (ui: ReactElement, options?: RenderOptions) =>
-  render(ui, { wrapper: Providers, ...options })
+const customRender = (
+  ui: ReactElement,
+  options?: Omit<RenderOptions, 'wrapper'>,
+) => render(ui, { ...options, wrapper: Providers })
 
 export * from '@testing-library/react'
 
