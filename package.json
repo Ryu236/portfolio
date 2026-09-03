@@ -1,8 +1,7 @@
 {
-  "name": "with-typescript-eslint-jest",
-  "author": "@erikdstock",
-  "license": "MIT",
-  "version": "1.0.0",
+  "name": "The portfolio of Ryu236",
+  "author": "@Ryu236",
+  "version": "2.0.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
